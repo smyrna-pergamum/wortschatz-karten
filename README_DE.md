@@ -26,7 +26,7 @@ Die Excel-Datei sollte folgende Spalten enthalten:
 
 | Spalte | Bedeutung |
 |---|---|
-| Unite | Einheit |
+| Lektion | Einheit |
 | Abschnitt | Abschnitt / Thema |
 | Deutsche Word | Deutsches Zielwort |
 | Erklärung | Erklärung auf Deutsch |
