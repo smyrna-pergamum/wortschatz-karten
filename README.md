@@ -33,7 +33,7 @@ The Excel file should contain the following columns:
 | Synonym | Synonym |
 | Antonym | Antonym |
 | English | English meaning |
-| Turkish | Turkish meaning |
+| MutterSprache | Mother Language meaning |
 | Beispiel | German example sentence |
 
 ## Installation for Users
