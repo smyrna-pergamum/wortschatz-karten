@@ -18,7 +18,7 @@ Die App wurde besonders für DSH/C1-Lernende entwickelt und arbeitet mit einer E
 - Statistikfenster
 - Light Theme und Dark Theme
 - Lokale Datenbank für den Lernfortschritt
-- Apple-inspirierte minimalistische Oberfläche
+- Minimalistische Oberfläche
 
 ## Excel-Format
 
