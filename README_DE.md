@@ -33,7 +33,7 @@ Die Excel-Datei sollte folgende Spalten enthalten:
 | Synonym | Synonym |
 | Antonym | Antonym |
 | English | Englische Bedeutung |
-| Turkish | Türkische Bedeutung |
+| Muttersprache | Muttersprache Bedeutung |
 | Beispiel | Deutscher Beispielsatz |
 
 ## Installation für Benutzer
