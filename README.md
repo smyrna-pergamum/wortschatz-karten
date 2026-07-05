@@ -18,7 +18,7 @@ The app is designed especially for DSH/C1 learners and works with an Excel vocab
 - Statistics window
 - Light and dark theme
 - Local database for learning progress
-- Apple-inspired minimalist GUI
+- Minimalist GUI
 
 ## Excel Format
 
