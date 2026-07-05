@@ -26,7 +26,7 @@ The Excel file should contain the following columns:
 
 | Column | Meaning |
 |---|---|
-| Unite | Unit |
+| Lektion | Unit |
 | Abschnitt | Section / topic |
 | Deutsche Word | Main German word |
 | Erklärung | German explanation |
