@@ -1,106 +1,101 @@
-# WortschatzKarten
+# Wortschatz Karten
 
-WortschatzKarten is a minimalist Windows desktop application for learning German vocabulary with flashcards.
+**English** · [Deutsch](README_DE.md)
 
-The app is designed especially for DSH/C1 learners and works with an Excel vocabulary table. It supports filtering by unit and section, spaced repetition, pronunciation, statistics, favorites, difficult words, and Excel export.
+A Windows flashcard app for learning German vocabulary – built for **DSH / C1** learners and working with an Excel vocabulary table (1,436 words in 10 units are included).
+
+[![Download](https://img.shields.io/github/v/release/smyrna-pergamum/wortschatz-karten?label=Download&style=for-the-badge)](https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest)
+![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+![Front of a card (light theme)](docs/screenshot_light.png)
+
+| Back of a card (dark theme) | Statistics |
+|---|---|
+| ![Back of a card](docs/screenshot_dark.png) | ![Statistics](docs/screenshot_stats.png) |
 
 ## Features
 
-- Import vocabulary from an Excel file
-- Filter cards by `Unite` and `Abschnitt`
-- Learn the German target word shown as the main flashcard word
-- Show explanations, synonyms, antonyms, English, Turkish, examples, and translations
-- German pronunciation button
-- Spaced repetition learning system
-- Mark words as known or unknown
-- Mark words as favorite or difficult
-- Export favorite and difficult words as Excel
-- Statistics window
-- Light and dark theme
-- Local database for learning progress
-- Minimalist GUI
+- **Spaced repetition (Leitner system)** – 5 boxes; known cards come back after 1, 2, 4, 8 and 16 days, unknown cards return at the end of the round
+- **Learning modes** – review (due + new), all cards, new only, last answered wrong, favorites, difficult words
+- **Filter** by unit (`Lektion`) and section (`Abschnitt`)
+- **Back of the card** – explanation, synonyms, antonyms, English, Turkish and example sentence, colour-coded
+- **Automatic translation** of the word and example sentence into your mother language (Turkish, English, Arabic, Russian, Persian, Spanish, French, Italian, Polish, Ukrainian) – cached locally
+- **Pronunciation** of German words (🔊) – online with a local audio cache, offline with an installed German Windows voice
+- **Favorites and difficult words**, exportable to Excel
+- **Statistics** with Leitner box distribution and results per unit
+- **Light and dark theme**, card-flip animation, sharp on high-DPI displays
+- **Adapts to the window size** – works on small laptop screens and with Windows display scaling (125 % / 150 %)
+- **Keyboard shortcuts** for learning without the mouse
+- All data stays **local** on your computer; progress is kept when you update the Excel file
 
-## Excel Format
+## Installation
 
-The Excel file should contain the following columns:
+1. Download **`WortschatzKarten_Setup.exe`** from the [latest release](https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest).
+2. Run the setup and follow the steps.
+   > Windows SmartScreen may show a warning because the installer is not code-signed. Click **More info → Run anyway**.
+3. Start **Wortschatz Karten**. On the first start the app finds the included vocabulary list and asks whether to import it – click **Yes**.
 
-| Column | Meaning |
+## Keyboard Shortcuts
+
+| Key | Action |
 |---|---|
-| Lektion | Unit |
-| Abschnitt | Section / topic |
-| Deutsche Word | Main German word |
-| Erklärung | German explanation |
-| Synonym | Synonym |
-| Antonym | Antonym |
-| English | English meaning |
-| MutterSprache | Mother Language meaning |
-| Beispiel | German example sentence |
+| Space | Flip card |
+| → / Enter | Next card |
+| ← | Previous card |
+| 1 | Not known |
+| 2 | Known |
+| S | Pronunciation |
+| F | Toggle favorite |
+| D | Toggle difficult |
+| M | Shuffle |
+| Ctrl+O | Update Excel |
+| Ctrl+E | Export favorites & difficult words |
 
-## Installation for Users
+## Using Your Own Excel File
 
-1. Download `WortschatzKarten.zip` from the GitHub release.
-2. Extract the ZIP file.
-3. Open the extracted folder.
-4. Run the setup file, for example:
+Choose **Daten › Excel aktualisieren…** and select an `.xlsx` file. Learning progress is kept for every word that still exists in the new file.
 
-```text
-WortschatzKarten_Setup.exe
-```
+The first rows of a sheet are searched for these column headers (German, English and Turkish variants are recognised):
 
-5. Install the program.
-6. After installation, start WortschatzKarten.
-7. On the first start, the program asks for an Excel file.
-8. Select the Excel file that was installed together with the program in the installation target folder.
+| Column | Meaning | Required |
+|---|---|---|
+| `Unite` / `Lektion` | Unit | – (otherwise taken from the sheet name) |
+| `Abschnitt` | Section / topic | – |
+| `Deutsche Word` / `Wort` | German word | **yes** |
+| `Erklärung` | German explanation | – |
+| `Synonym` | Synonyms | – |
+| `Antonym` | Antonyms | – |
+| `English` | English meaning | – |
+| `Turkish` / `Muttersprache` | Turkish meaning | – |
+| `Beispiel` | German example sentence | – |
 
-Usually the Excel file is located in:
+The included file [`DSH_Wortschatz_Table.xlsx`](DSH_Wortschatz_Table.xlsx) can be used as a template.
 
-```text
-C:\Program Files\WortschatzKarten\DSH_Wortschatz_Table.xlsx
-```
+## Notes
 
-After importing the Excel file once, the program stores the vocabulary in its local database. The Excel file does not need to be selected again unless you want to update the vocabulary data.
+- **Internet** is only needed for automatic translation and for the first pronunciation of a word; results are cached afterwards. If the translation service is temporarily unavailable, the app says so – the vocabulary itself always works offline.
+- **Local data** (progress, settings, caches) is stored in `%APPDATA%\WortschatzKarten`. Use **Daten › Lernfortschritt zurücksetzen…** to start over.
 
-## Updating the Excel Data
+## For Developers
 
-If you want to use a newer Excel file later, open the program and choose:
-
-```text
-Daten > Excel aktualisieren...
-```
-
-Then select the updated Excel file.
-
-## Local Data Storage
-
-The app stores learning progress, statistics, favorites, difficult words, and cached data locally under:
-
-```text
-%APPDATA%\WortschatzKarten
-```
-
-## Developer Start
-
-If you want to run the Python version directly:
+Requires Python 3.10 or newer.
 
 ```bash
 pip install -r requirements.txt
 python wortschatz_karten.py
 ```
 
-## Build Windows EXE
+Build the EXE and the installer ([Inno Setup 6](https://jrsoftware.org/isinfo.php)):
 
 ```bash
+pip install pyinstaller
 pyinstaller --noconsole --onedir --name WortschatzKarten --icon "Wortschatz_karten.ico" wortschatz_karten.py
-```
-
-## Build Installer
-
-The installer is created with Inno Setup:
-
-```bash
 ISCC.exe installer.iss
 ```
 
+The installer is written to `installer_output\WortschatzKarten_Setup.exe`.
+
 ## License
 
-MIT License
+[MIT](LICENSE)

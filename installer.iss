@@ -1,5 +1,5 @@
 #define MyAppName "WortschatzKarten"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "WortschatzKarten"
 #define MyAppExeName "WortschatzKarten.exe"
 #define MyAppIconName "Wortschatz_karten.ico"

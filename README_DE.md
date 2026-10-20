@@ -1,106 +1,101 @@
-# WortschatzKarten
+# Wortschatz Karten
 
-WortschatzKarten ist eine minimalistische Windows-Desktop-App zum Lernen deutscher Vokabeln mit Karteikarten.
+[English](README.md) · **Deutsch**
 
-Die App wurde besonders für DSH/C1-Lernende entwickelt und arbeitet mit einer Excel-Wortschatztabelle. Sie unterstützt Filter nach Einheit und Abschnitt, Spaced Repetition, Aussprache, Statistik, Favoriten, schwierige Wörter und Excel-Export.
+Eine Karteikarten-App für Windows zum Lernen deutscher Vokabeln – entwickelt für **DSH-/C1-Lernende**, arbeitet mit einer Excel-Wortschatztabelle (1.436 Wörter in 10 Lektionen sind enthalten).
+
+[![Download](https://img.shields.io/github/v/release/smyrna-pergamum/wortschatz-karten?label=Download&style=for-the-badge)](https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest)
+![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge)
+![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green?style=for-the-badge)
+
+![Vorderseite einer Karte (helles Design)](docs/screenshot_light.png)
+
+| Rückseite (dunkles Design) | Statistik |
+|---|---|
+| ![Rückseite einer Karte](docs/screenshot_dark.png) | ![Statistik](docs/screenshot_stats.png) |
 
 ## Funktionen
 
-- Vokabeln aus einer Excel-Datei importieren
-- Karten nach `Unite` und `Abschnitt` filtern
-- Das deutsche Zielwort als Hauptwort der Karte anzeigen
-- Erklärung, Synonyme, Antonyme, Englisch, Türkisch, Beispiele und Übersetzungen anzeigen
-- Aussprache-Button für deutsche Wörter
-- Spaced-Repetition-Lernsystem
-- Wörter als gewusst oder nicht gewusst markieren
-- Wörter als Favorit oder schwierig markieren
-- Favoriten und schwierige Wörter als Excel exportieren
-- Statistikfenster
-- Light Theme und Dark Theme
-- Lokale Datenbank für den Lernfortschritt
-- Minimalistische Oberfläche
+- **Spaced Repetition (Leitner-System)** – 5 Boxen; gewusste Karten kommen nach 1, 2, 4, 8 und 16 Tagen wieder, nicht gewusste am Ende der Runde
+- **Lernmodi** – Wiederholung (fällig + neu), alle Karten, nur neue, zuletzt nicht gewusst, Favoriten, schwierige Wörter
+- **Filter** nach Lektion und Abschnitt
+- **Rückseite** – Erklärung, Synonyme, Antonyme, Englisch, Türkisch und Beispielsatz, farblich gegliedert
+- **Automatische Übersetzung** von Wort und Beispielsatz in die Muttersprache (Türkisch, Englisch, Arabisch, Russisch, Persisch, Spanisch, Französisch, Italienisch, Polnisch, Ukrainisch) – lokal zwischengespeichert
+- **Aussprache** deutscher Wörter (🔊) – online mit lokalem Audio-Cache, offline mit einer installierten deutschen Windows-Stimme
+- **Favoriten und schwierige Wörter**, exportierbar als Excel-Datei
+- **Statistik** mit Leitner-Box-Verteilung und Auswertung je Lektion
+- **Helles und dunkles Design**, Umdreh-Animation, scharf auf High-DPI-Bildschirmen
+- **Passt sich der Fenstergröße an** – funktioniert auf kleinen Laptop-Bildschirmen und mit Windows-Skalierung (125 % / 150 %)
+- **Tastenkürzel** für das Lernen ohne Maus
+- Alle Daten bleiben **lokal** auf dem Computer; der Lernfortschritt bleibt beim Aktualisieren der Excel-Datei erhalten
 
-## Excel-Format
+## Installation
 
-Die Excel-Datei sollte folgende Spalten enthalten:
+1. **`WortschatzKarten_Setup.exe`** aus dem [neuesten Release](https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest) herunterladen.
+2. Setup starten und den Schritten folgen.
+   > Windows SmartScreen kann eine Warnung anzeigen, weil der Installer nicht signiert ist. Auf **Weitere Informationen → Trotzdem ausführen** klicken.
+3. **Wortschatz Karten** starten. Beim ersten Start findet die App die mitgelieferte Wortliste und fragt, ob sie importiert werden soll – mit **Ja** bestätigen.
 
-| Spalte | Bedeutung |
+## Tastenkürzel
+
+| Taste | Aktion |
 |---|---|
-| Lektion | Einheit |
-| Abschnitt | Abschnitt / Thema |
-| Deutsche Word | Deutsches Zielwort |
-| Erklärung | Erklärung auf Deutsch |
-| Synonym | Synonym |
-| Antonym | Antonym |
-| English | Englische Bedeutung |
-| Muttersprache | Muttersprache Bedeutung |
-| Beispiel | Deutscher Beispielsatz |
+| Leertaste | Karte umdrehen |
+| → / Enter | Nächste Karte |
+| ← | Vorherige Karte |
+| 1 | Nicht gewusst |
+| 2 | Gewusst |
+| S | Aussprache |
+| F | Favorit an/aus |
+| D | Schwieriges Wort an/aus |
+| M | Mischen |
+| Strg+O | Excel aktualisieren |
+| Strg+E | Favoriten & schwierige Wörter exportieren |
 
-## Installation für Benutzer
+## Eigene Excel-Datei verwenden
 
-1. Lade `WortschatzKarten.zip` aus dem GitHub-Release herunter.
-2. Entpacke die ZIP-Datei.
-3. Öffne den entpackten Ordner.
-4. Starte die Setup-Datei, zum Beispiel:
+Über **Daten › Excel aktualisieren…** eine `.xlsx`-Datei auswählen. Der Lernfortschritt bleibt für alle Wörter erhalten, die in der neuen Datei weiterhin vorkommen.
 
-```text
-WortschatzKarten_Setup.exe
-```
+In den ersten Zeilen einer Tabelle wird nach diesen Spaltenüberschriften gesucht (deutsche, englische und türkische Varianten werden erkannt):
 
-5. Installiere das Programm.
-6. Starte danach WortschatzKarten.
-7. Beim ersten Start fragt das Programm nach einer Excel-Datei.
-8. Wähle die Excel-Datei aus, die zusammen mit dem Programm in den Installationsordner kopiert wurde.
+| Spalte | Bedeutung | Pflicht |
+|---|---|---|
+| `Unite` / `Lektion` | Einheit | – (sonst aus dem Tabellennamen) |
+| `Abschnitt` | Abschnitt / Thema | – |
+| `Deutsche Word` / `Wort` | Deutsches Wort | **ja** |
+| `Erklärung` | Erklärung auf Deutsch | – |
+| `Synonym` | Synonyme | – |
+| `Antonym` | Antonyme | – |
+| `English` | Englische Bedeutung | – |
+| `Turkish` / `Muttersprache` | Türkische Bedeutung | – |
+| `Beispiel` | Deutscher Beispielsatz | – |
 
-Normalerweise befindet sich die Excel-Datei hier:
+Die mitgelieferte Datei [`DSH_Wortschatz_Table.xlsx`](DSH_Wortschatz_Table.xlsx) kann als Vorlage dienen.
 
-```text
-C:\Program Files\WortschatzKarten\DSH_Wortschatz_Table.xlsx
-```
+## Hinweise
 
-Nachdem die Excel-Datei einmal importiert wurde, speichert das Programm die Vokabeln in einer lokalen Datenbank. Die Excel-Datei muss danach nicht erneut ausgewählt werden, außer wenn die Vokabeldaten aktualisiert werden sollen.
+- **Internet** wird nur für die automatische Übersetzung und die erste Aussprache eines Wortes benötigt; danach wird zwischengespeichert. Ist der Übersetzungsdienst vorübergehend nicht erreichbar, zeigt die App das an – der Wortschatz selbst funktioniert immer offline.
+- **Lokale Daten** (Lernfortschritt, Einstellungen, Caches) liegen unter `%APPDATA%\WortschatzKarten`. Mit **Daten › Lernfortschritt zurücksetzen…** kann neu begonnen werden.
 
-## Excel-Daten aktualisieren
+## Für Entwickler
 
-Wenn später eine neue Excel-Datei verwendet werden soll, öffne im Programm:
-
-```text
-Daten > Excel aktualisieren...
-```
-
-Danach kann die neue Excel-Datei ausgewählt werden.
-
-## Lokale Datenspeicherung
-
-Die App speichert Lernfortschritt, Statistik, Favoriten, schwierige Wörter und Cache-Daten lokal unter:
-
-```text
-%APPDATA%\WortschatzKarten
-```
-
-## Start für Entwickler
-
-Wenn die Python-Version direkt gestartet werden soll:
+Benötigt Python 3.10 oder neuer.
 
 ```bash
 pip install -r requirements.txt
 python wortschatz_karten.py
 ```
 
-## Windows-EXE erstellen
+EXE und Installer erstellen ([Inno Setup 6](https://jrsoftware.org/isinfo.php)):
 
 ```bash
+pip install pyinstaller
 pyinstaller --noconsole --onedir --name WortschatzKarten --icon "Wortschatz_karten.ico" wortschatz_karten.py
-```
-
-## Installer erstellen
-
-Der Installer wird mit Inno Setup erstellt:
-
-```bash
 ISCC.exe installer.iss
 ```
 
+Der Installer liegt danach unter `installer_output\WortschatzKarten_Setup.exe`.
+
 ## Lizenz
 
-MIT License
+[MIT](LICENSE)
