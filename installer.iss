@@ -30,7 +30,7 @@ Name: "desktopicon"; Description: "Desktop-Verknüpfung erstellen"; GroupDescrip
 
 [Files]
 Source: "dist\WortschatzKarten\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "README_DE.md"; DestDir: "{app}"; Flags: ignoreversion skipifsourcedoesntexist
+Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion skipifsourcedoesntexist
 Source: "{#MyExcelName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#MyAppIconName}"; DestDir: "{app}"; Flags: ignoreversion
 
