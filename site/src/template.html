@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="{{lang}}" data-assets="../assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{{metaDesc}}">
+<meta name="theme-color" content="#ffd23f">
+<title>{{title}}</title>
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="tr" href="../tr/">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a href="#main" class="skip">{{skip}}</a>
+{{>defs}}
+<header class="topbar">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="{{logoAria}}">
+      <svg class="logo-mark" viewBox="0 0 60 60" aria-hidden="true"><rect x="12" y="6" width="38" height="48" rx="7" fill="#43b4ec" stroke="#16120f" stroke-width="4" transform="rotate(10 31 30)"/><rect x="8" y="6" width="38" height="48" rx="7" fill="#fff" stroke="#16120f" stroke-width="4" transform="rotate(-6 27 30)"/><ellipse cx="21" cy="25" rx="4" ry="6"/><ellipse cx="33" cy="24" rx="4" ry="6"/><path d="M19 36 q8 9 16 -1" fill="#ec3b2f" stroke="#16120f" stroke-width="3" stroke-linecap="round"/></svg>
+      <span class="logo-text">Wortschatz Karten</span>
+    </a>
+    <nav class="navlinks" aria-label="{{navAria}}">
+      <a href="#ozellikler">{{navFeatures}}</a><a href="#dene">{{navTry}}</a><a href="#yontem">{{navHow}}</a><a href="#kilavuz">{{navGuide}}</a><a href="#excel">{{navExcel}}</a><a href="#sorular">{{navFaq}}</a>
+    </nav>
+    <div class="topbar-right">
+      <a class="gh" href="https://github.com/smyrna-pergamum/wortschatz-karten" target="_blank" rel="noopener">GitHub ↗</a>
+      <nav class="lang" aria-label="{{langAria}}">{{langSwitch}}</nav>
+      <a class="btn" href="#indir"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>{{dlShort}}</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="tag">{{heroTag}}</span>
+      <h1 id="hero-heading"><span class="l1">{{heroL1}}</span><span class="l2">{{heroL2}}</span></h1>
+      <p class="lead">{{heroLead}}</p>
+      <div class="hero-actions">
+        <a class="btn download-latest" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>{{dlFree}}<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v11m-4-4 4 4 4-4M3 14v4h14v-4"/></svg></a>
+        <a href="#dene" class="small-link">{{heroTry}} ↘</a>
+        <a href="#excel" class="small-link">{{heroExcel}} ↘</a>
+        <a href="#kilavuz" class="small-link">{{heroGuide}} ↘</a>
+      </div>
+      <p class="subcta">{{heroSub}}</p>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="rings"></div>
+      <div class="speedlines"><i></i><i></i><i></i></div>
+      {{>mascot}}
+      <div class="bubble">HALLO!</div>
+      <div class="burst"><svg><use href="#starburst" fill="#ffd23f"/></svg><span>{{burstFree}}</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<div class="wrap">
+  <div class="numbers" aria-label="{{numbersAria}}">
+    <div class="number"><div class="burst" style="--r:-8deg"><svg><use href="#starburst" fill="#ec3b2f"/></svg><span><strong>{{n1}}</strong></span></div><p>{{n1t}}</p></div>
+    <div class="number"><div class="burst" style="--r:6deg"><svg><use href="#starburst" fill="#43b4ec"/></svg><span><strong class="lvl">A1–C1</strong></span></div><p>{{n2t}}</p></div>
+    <div class="number"><div class="burst" style="--r:-4deg"><svg><use href="#starburst" fill="#3dbb6e"/></svg><span><strong>5</strong></span></div><p>{{n3t}}</p></div>
+    <div class="number"><div class="burst" style="--r:9deg"><svg><use href="#starburst" fill="#ff8a1f"/></svg><span><strong>10</strong></span></div><p>{{n4t}}</p></div>
+  </div>
+</div>
+
+<section id="ekranlar" class="tv-sec" aria-labelledby="tv-heading">
+  <div class="wrap tv-grid">
+    <div class="tv-copy">
+      <span class="tag sky">{{tvTag}}</span>
+      <h2 id="tv-heading">{{tvH}}</h2>
+      <p>{{tvP}}</p>
+    </div>
+    <figure style="margin:0">
+      <div class="tv">
+        <svg class="tv-antenna" viewBox="0 0 120 72" aria-hidden="true"><path d="M60 70 L18 6 M60 70 L104 10" stroke="#16120f" stroke-width="6" stroke-linecap="round"/><circle cx="18" cy="6" r="7" fill="#ec3b2f" stroke="#16120f" stroke-width="4"/><circle cx="104" cy="10" r="7" fill="#ffd23f" stroke="#16120f" stroke-width="4"/></svg>
+        <button class="screen" id="main-zoom" type="button" aria-label="{{zoomMainAria}}">
+          <img id="main-screenshot" src="../assets/app-light.png" alt="{{altLight}}" width="1180" height="800" fetchpriority="high">
+          <span class="zoom-hint">{{zoom}}</span>
+        </button>
+        <div class="tv-controls">
+          <div class="knobs" aria-hidden="true"><i></i><i></i></div>
+          <div class="segmented" role="group" aria-label="{{themeAria}}"><button type="button" id="light-btn" aria-pressed="true">{{light}}</button><button type="button" id="dark-btn" aria-pressed="false">{{dark}}</button></div>
+        </div>
+      </div>
+      <figcaption class="caption" id="screen-caption">{{capLight}}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="ozellikler" class="sec" aria-labelledby="features-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag pink">01 · {{fTag}}</span><h2 id="features-heading" style="margin-top:18px">{{fH}}</h2></div>
+    </div>
+    <div class="features">
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#starburst" fill="#ffd23f" x="0" y="0" width="100" height="100"/><path d="M34 40 h32 M34 52 h24 M34 64 h28" stroke="#16120f" stroke-width="6" stroke-linecap="round"/></svg>
+        <span class="feature-index">01</span>
+        <h3>{{f1H}}</h3><p>{{f1P}}</p><span class="inline-note">{{f1N}}</span>
+      </article>
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="#ec3b2f" stroke="#16120f" stroke-width="6"/><path d="M50 26 v26 l16 10" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/><path d="M50 26 v26 l16 10" fill="none" stroke="#16120f" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="feature-index">02</span>
+        <h3>{{f2H}}</h3><p>{{f2P}}</p><span class="inline-note">{{f2N}}</span>
+      </article>
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M20 40 h16 l20 -18 v56 l-20 -18 h-16z" fill="#43b4ec" stroke="#16120f" stroke-width="6" stroke-linejoin="round"/><path d="M66 36 q10 14 0 28 M76 26 q20 24 0 48" fill="none" stroke="#16120f" stroke-width="6" stroke-linecap="round"/></svg>
+        <span class="feature-index">03</span>
+        <h3>{{f3H}}</h3><p>{{f3P}}</p><span class="inline-note">{{f3N}}</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="dene" class="sec demo-sec" aria-labelledby="demo-heading">
+  <div class="wrap demo-grid">
+    <div class="demo-copy">
+      <span class="tag">{{dTag}}</span>
+      <h2 id="demo-heading">{{dH}}</h2>
+      <p>{{dP}}</p>
+      <ol class="check-list">
+        <li><b>1</b>{{d1}}</li><li><b>2</b>{{d2}}</li><li><b>3</b>{{d3}}</li><li><b>4</b>{{d4}}</li>
+      </ol>
+    </div>
+    <div>
+      <div class="card-wrap">
+        <div class="card-meta"><span class="tag pink">{{cardTag}}</span><span class="tag sky" id="card-side-label">{{sideFront}}</span></div>
+        <div class="flipper" id="flipper">
+          <div class="face front panel" id="card-front">
+            <div class="card-label">{{cardKind}}</div>
+            <h3 lang="de">der Dialekt, -e</h3>
+            <p class="hint">{{cardHint}}</p>
+          </div>
+          <div class="face back panel" id="card-back" aria-hidden="true">
+            <div class="card-label" lang="de">REGIONALE SPRACHFORM</div>
+            <p class="definition">{{cardDef}}</p>
+            <p class="example" lang="de">„In Bayern hört man viele Dialekte.“</p>
+            <div class="word-detail"><span lang="de">Synonym: Mundart</span> · <span lang="de">Antonym: Standardsprache</span></div>
+          </div>
+        </div>
+        <p class="sr" id="card-live" aria-live="polite"></p>
+        <div class="card-controls"><span>{{cardWait}}</span><button class="btn alt" id="flip-card" type="button" aria-pressed="false">{{flip}}</button></div>
+      </div>
+      <p class="demo-note">{{demoNote}}</p>
+    </div>
+  </div>
+</section>
+
+<section id="yontem" class="sec method-sec" aria-labelledby="method-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag green">02 · {{mTag}}</span><h2 id="method-heading" style="margin-top:18px">{{mH}}</h2></div>
+      <p>{{mP}}</p>
+    </div>
+    <div class="leitner" role="group" aria-label="{{mAria}}">
+      {{crates}}
+    </div>
+    <div class="method-feedback">
+      <svg class="mini" viewBox="80 40 250 300" aria-hidden="true">
+        <rect x="96" y="58" width="208" height="266" rx="26" fill="#fffaf0" stroke="#16120f" stroke-width="8" transform="rotate(-4 200 190)"/>
+        <ellipse cx="166" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="7"/><ellipse cx="236" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="7"/>
+        <ellipse cx="174" cy="156" rx="11" ry="22"/><ellipse cx="244" cy="156" rx="11" ry="22"/>
+        <path d="M150 226 C170 280 238 280 256 222" fill="none" stroke="#16120f" stroke-width="9" stroke-linecap="round"/>
+      </svg>
+      <div class="talk" aria-live="polite"><strong id="box-title">{{box1Title}}</strong><p id="box-description">{{box1Text}}</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kilavuz" class="sec guide-sec" aria-labelledby="guide-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag sky">03 · {{gTag}}</span><h2 id="guide-heading" style="margin-top:18px">{{gH}}</h2></div>
+      <p>{{gP}}</p>
+    </div>
+    <ol class="steps">
+      <li class="step panel"><span class="step-no">1</span><h3>{{s1H}}</h3><p>{{s1P}}</p><a class="small-link" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest">{{s1L}} ↗</a></li>
+      <li class="step panel"><span class="step-no">2</span><h3>{{s2H}}</h3><p>{{s2P}}</p></li>
+      <li class="step panel"><span class="step-no">3</span><h3>{{s3H}}</h3><p>{{s3P}}</p></li>
+      <li class="step panel"><span class="step-no">4</span><h3>{{s4H}}</h3><p>{{s4P}}</p></li>
+      <li class="step panel"><span class="step-no">5</span><h3>{{s5H}}</h3><p>{{s5P}}</p></li>
+    </ol>
+    <div class="smartscreen"><span class="burst mini-burst" aria-hidden="true"><svg><use href="#starburst" fill="#ffd23f"/></svg><span>!</span></span><p>{{smart}}</p></div>
+    <div class="guide-grid">
+      <article class="panel guide-card">
+        <span class="tag pink">{{kTag}}</span>
+        <h3>{{kH}}</h3>
+        <dl class="keys">
+          <div><dt><kbd>Space</kbd></dt><dd>{{k1}}</dd></div>
+          <div><dt><kbd>→</kbd> <kbd>Enter</kbd></dt><dd>{{k2}}</dd></div>
+          <div><dt><kbd>←</kbd></dt><dd>{{k3}}</dd></div>
+          <div><dt><kbd>1</kbd> <kbd>2</kbd></dt><dd>{{k4}}</dd></div>
+          <div><dt><kbd>S</kbd></dt><dd>{{k5}}</dd></div>
+          <div><dt><kbd>F</kbd> <kbd>D</kbd></dt><dd>{{k6}}</dd></div>
+          <div><dt><kbd>M</kbd></dt><dd>{{k7}}</dd></div>
+          <div><dt><kbd>Ctrl</kbd>+<kbd>O</kbd></dt><dd>{{k8}}</dd></div>
+          <div><dt><kbd>Ctrl</kbd>+<kbd>E</kbd></dt><dd>{{k9}}</dd></div>
+        </dl>
+      </article>
+      <article class="panel guide-card">
+        <span class="tag green">{{modesTag}}</span>
+        <h3>{{modesH}}</h3>
+        <ul class="modes">{{modesList}}</ul>
+        <p class="guide-note">{{modesNote}}</p>
+      </article>
+      <article class="panel guide-card">
+        <span class="tag">{{setTag}}</span>
+        <h3>{{setH}}</h3>
+        <ul class="modes">{{setList}}</ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="excel" class="sec excel-sec" aria-labelledby="excel-heading">
+  <div class="wrap excel-grid">
+    <div class="excel-sheet panel" aria-hidden="true">
+      <div class="sheet-bar"><i></i><i></i><i></i><span>DSH_Wortschatz_Table.xlsx</span></div>
+      <table>
+        <tr><th>Unite</th><th>Deutsche Word</th><th>Erklärung</th><th>Turkish</th></tr>
+        <tr><td>1</td><td>der Dialekt</td><td>regionale Sprachform</td><td>lehçe</td></tr>
+        <tr><td>1</td><td>die Mundart</td><td>Dialekt</td><td>ağız</td></tr>
+        <tr><td>2</td><td>…</td><td>…</td><td>…</td></tr>
+      </table>
+      <span class="burst sheet-burst"><svg><use href="#starburst" fill="#3dbb6e"/></svg><span>{{sheetBurst}}</span></span>
+    </div>
+    <div>
+      <span class="tag green">{{xTag}}</span>
+      <h2 id="excel-heading" style="margin:18px 0 16px">{{xH}}</h2>
+      <p>{{xP}}</p>
+      <div class="hero-actions" style="margin:26px 0 22px">
+        <a class="btn" style="--bg:var(--green)" href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 8l8 8M16 8l-8 8" stroke-linecap="round"/></svg>{{xBtn}}</a>
+        <a class="small-link" href="https://github.com/smyrna-pergamum/wortschatz-karten/blob/main/DSH_Wortschatz_Table.xlsx" target="_blank" rel="noopener">{{xView}} ↗</a>
+      </div>
+      <details class="cols"><summary>{{xColsS}}</summary>
+        <div class="cols-body">
+          <p>{{xColsP}}</p>
+          <table class="col-table">
+            <tr><th>{{cCol}}</th><th>{{cMean}}</th><th>{{cReq}}</th></tr>
+            <tr><td><code>Unite</code> / <code>Lektion</code></td><td>{{cUnit}}</td><td>{{no}}*</td></tr>
+            <tr><td><code>Abschnitt</code></td><td>{{cSection}}</td><td>{{no}}</td></tr>
+            <tr><td><code>Deutsche Word</code> / <code>Wort</code></td><td>{{cWord}}</td><td><b>{{yes}}</b></td></tr>
+            <tr><td><code>Erklärung</code></td><td>{{cExpl}}</td><td>{{no}}</td></tr>
+            <tr><td><code>Synonym</code> / <code>Antonym</code></td><td>{{cSyn}}</td><td>{{no}}</td></tr>
+            <tr><td><code>English</code></td><td>{{cEn}}</td><td>{{no}}</td></tr>
+            <tr><td><code>Turkish</code> / <code>Muttersprache</code></td><td>{{cTr}}</td><td>{{no}}</td></tr>
+            <tr><td><code>Beispiel</code></td><td>{{cEx}}</td><td>{{no}}</td></tr>
+          </table>
+          <p class="guide-note">{{xColsNote}}</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="insights-heading">
+  <div class="wrap insights">
+    <div class="stats-panel">
+      <span class="tag">04 · {{iTag}}</span>
+      <h2 id="insights-heading">{{iH}}</h2>
+      <p>{{iP}}</p>
+      <button class="frame" id="stats-zoom" type="button" aria-label="{{zoomStatsAria}}"><img src="../assets/stats.png" alt="{{altStats}}" width="820" height="680" loading="lazy"><span class="zoom-hint" aria-hidden="true">{{zoom}}</span></button>
+      <p class="stats-caption">{{iCap}}</p>
+    </div>
+    <aside class="aside-features" aria-label="{{asideAria}}">
+      <article class="aside-feature panel"><span class="tag">{{a1Tag}}</span><h3>{{a1H}}</h3><p>{{a1P}}</p></article>
+      <article class="aside-feature panel"><span class="tag pink">{{a2Tag}}</span><h3>{{a2H}}</h3><p>{{a2P}}</p><div class="languages">{{langList}}</div></article>
+      <article class="aside-feature panel"><span class="tag sky">{{a3Tag}}</span><h3>{{a3H}}</h3><p>{{a3P}}</p></article>
+    </aside>
+  </div>
+</section>
+
+<section id="sorular" class="sec faq-sec" aria-labelledby="faq-heading">
+  <div class="wrap faq">
+    <div>
+      <span class="tag">05 · {{qTag}}</span>
+      <h2 id="faq-heading">{{qH}}</h2>
+      <p class="faq-intro">{{qIntro}}<br><a href="https://github.com/smyrna-pergamum/wortschatz-karten#readme" target="_blank" rel="noopener">{{qDocs}} ↗</a></p>
+    </div>
+    <div>{{faqList}}</div>
+  </div>
+</section>
+
+<section id="indir" class="download-sec" aria-labelledby="download-heading">
+  <div class="wrap">
+    <div class="iris iris-reveal" id="iris">
+      <div class="iris-inner">
+        <span class="tag">{{zTag}}</span>
+        <h2 id="download-heading">{{zH}}</h2>
+        <p>{{zP}}</p>
+        <div class="download-links">
+          <a class="btn download-latest" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>{{dlFree}} ↓</a>
+          <a class="btn alt" href="https://github.com/smyrna-pergamum/wortschatz-karten" target="_blank" rel="noopener">{{zSource}} ↗</a>
+        </div>
+        <div class="download-foot">Windows 10 / 11 · 64 bit · GitHub Releases</div>
+      </div>
+    </div>
+    <div class="iris-extra">
+      <a class="btn" style="--bg:var(--green)" href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>{{xBtn}} ↓</a>
+      <a class="btn sky" href="#kilavuz">{{heroGuide}} ↑</a>
+    </div>
+    <div class="privacy-line"><span>{{pr1}}</span><span>{{pr2}}</span><span>{{pr3}}</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-main">
+      <a href="#" class="logo">Wortschatz Karten</a>
+      <div class="footer-links"><a href="#kilavuz">{{heroGuide}}</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>{{navExcel}} ↓</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/issues" target="_blank" rel="noopener">{{feedback}} ↗</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/blob/main/LICENSE" target="_blank" rel="noopener">{{license}} ↗</a><a href="#main">{{top}} ↑</a></div>
+    </div>
+    <div class="footer-bottom"><p>{{footLine}}</p><span>{{footSmall}}</span></div>
+  </div>
+</footer>
+
+<dialog id="image-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-head"><span id="dialog-title">{{dlgLight}}</span><button type="button" id="close-dialog">{{close}} ×</button></div>
+  <img id="dialog-image" class="dialog-img" src="../assets/app-light.png" alt="{{altLight}}">
+</dialog>
+
+<script>window.T={{jsT}};</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

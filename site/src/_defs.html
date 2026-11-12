@@ -1,0 +1,24 @@
+<!-- Paylaşılan SVG tanımları: "kaynayan çizgi" filtresi ve ortak şekiller -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="boil" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence id="boil-noise" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <symbol id="starburst" viewBox="-100 -100 200 200">
+      <polygon points="0,-96 18,-52 60,-76 48,-30 94,-30 58,0 94,30 48,30 60,76 18,52 0,96 -18,52 -60,76 -48,30 -94,30 -58,0 -94,-30 -48,-30 -60,-76 -18,-52" stroke="#16120f" stroke-width="7" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="glove" viewBox="-40 -40 80 80">
+      <g stroke="#16120f" stroke-width="5" fill="#fff" stroke-linejoin="round">
+        <rect x="-16" y="16" width="32" height="16" rx="6"/>
+        <ellipse cx="-14" cy="-14" rx="9" ry="18" transform="rotate(-18 -14 -14)"/>
+        <ellipse cx="2" cy="-20" rx="9" ry="19"/>
+        <ellipse cx="17" cy="-14" rx="9" ry="17" transform="rotate(16 17 -14)"/>
+        <circle cx="0" cy="2" r="22"/>
+        <ellipse cx="-22" cy="4" rx="9" ry="14" transform="rotate(-40 -22 4)"/>
+        <path d="M-6 -4 v12 M6 -4 v12" fill="none" stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+

@@ -18,6 +18,7 @@
 
 <p align="center">
   <a href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest"><b>⬇ Download for Windows</b></a>
+  &nbsp;·&nbsp; <a href="https://smyrna-pergamum.github.io/wortschatz-karten/">Website</a>
   &nbsp;·&nbsp; <a href="#features">Features</a>
   &nbsp;·&nbsp; <a href="#quick-start">Quick start</a>
   &nbsp;·&nbsp; <a href="#privacy">Privacy</a>
@@ -103,6 +104,14 @@ ISCC.exe installer.iss
 ```
 
 The installer is written to `installer_output\WortschatzKarten_Setup.exe`. It contains the app, `DSH_Wortschatz_Table.xlsx` and the icon. Keep the `AppId` in `installer.iss` constant so that new versions upgrade the existing installation.
+
+## Website
+
+The website (German, English and Turkish) is served by GitHub Pages from `docs/`. Its texts live in `site/build.py`, the page skeleton in `site/src/template.html`, and styles and scripts in `docs/assets/`. After changing a text or the template, rebuild the pages:
+
+```bash
+python site/build.py
+```
 
 ## Vocabulary file (Excel)
 

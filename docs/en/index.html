@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en" data-assets="../assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Wortschatz Karten: free flashcard app for Windows. German from A1 to C1 and for the DSH exam. 1,436 words, Leitner spaced repetition, pronunciation and translations in 10 languages.">
+<meta name="theme-color" content="#ffd23f">
+<title>Wortschatz Karten — It starts with a word!</title>
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="tr" href="../tr/">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<!-- Paylaşılan SVG tanımları: "kaynayan çizgi" filtresi ve ortak şekiller -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="boil" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence id="boil-noise" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <symbol id="starburst" viewBox="-100 -100 200 200">
+      <polygon points="0,-96 18,-52 60,-76 48,-30 94,-30 58,0 94,30 48,30 60,76 18,52 0,96 -18,52 -60,76 -48,30 -94,30 -58,0 -94,-30 -48,-30 -60,-76 -18,-52" stroke="#16120f" stroke-width="7" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="glove" viewBox="-40 -40 80 80">
+      <g stroke="#16120f" stroke-width="5" fill="#fff" stroke-linejoin="round">
+        <rect x="-16" y="16" width="32" height="16" rx="6"/>
+        <ellipse cx="-14" cy="-14" rx="9" ry="18" transform="rotate(-18 -14 -14)"/>
+        <ellipse cx="2" cy="-20" rx="9" ry="19"/>
+        <ellipse cx="17" cy="-14" rx="9" ry="17" transform="rotate(16 17 -14)"/>
+        <circle cx="0" cy="2" r="22"/>
+        <ellipse cx="-22" cy="4" rx="9" ry="14" transform="rotate(-40 -22 4)"/>
+        <path d="M-6 -4 v12 M6 -4 v12" fill="none" stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Wortschatz Karten, back to top">
+      <svg class="logo-mark" viewBox="0 0 60 60" aria-hidden="true"><rect x="12" y="6" width="38" height="48" rx="7" fill="#43b4ec" stroke="#16120f" stroke-width="4" transform="rotate(10 31 30)"/><rect x="8" y="6" width="38" height="48" rx="7" fill="#fff" stroke="#16120f" stroke-width="4" transform="rotate(-6 27 30)"/><ellipse cx="21" cy="25" rx="4" ry="6"/><ellipse cx="33" cy="24" rx="4" ry="6"/><path d="M19 36 q8 9 16 -1" fill="#ec3b2f" stroke="#16120f" stroke-width="3" stroke-linecap="round"/></svg>
+      <span class="logo-text">Wortschatz Karten</span>
+    </a>
+    <nav class="navlinks" aria-label="Main menu">
+      <a href="#ozellikler">Features</a><a href="#dene">Try a card</a><a href="#yontem">How it works</a><a href="#kilavuz">Guide</a><a href="#excel">Excel list</a><a href="#sorular">FAQ</a>
+    </nav>
+    <div class="topbar-right">
+      <a class="gh" href="https://github.com/smyrna-pergamum/wortschatz-karten" target="_blank" rel="noopener">GitHub ↗</a>
+      <nav class="lang" aria-label="Language"><a href="../de/" hreflang="de" lang="de" title="Deutsch">DE</a><a href="../en/" hreflang="en" lang="en" title="English" aria-current="page">EN</a><a href="../tr/" hreflang="tr" lang="tr" title="Türkçe">TR</a></nav>
+      <a class="btn" href="#indir"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="tag">GERMAN FROM A1 TO C1 &amp; DSH</span>
+      <h1 id="hero-heading"><span class="l1">Learn a word.</span><span class="l2"><span>Open</span> <span>a</span> <span>world!</span></span></h1>
+      <p class="lead">Seeing a word is one thing; really learning it is another. With explanations, example sentences and spaced repetition you build your German vocabulary step by step — from your first A1 word all the way to the DSH.</p>
+      <div class="hero-actions">
+        <a class="btn download-latest" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Free download<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v11m-4-4 4 4 4-4M3 14v4h14v-4"/></svg></a>
+        <a href="#dene" class="small-link">Try a card first ↘</a>
+        <a href="#excel" class="small-link">Excel word list ↘</a>
+        <a href="#kilavuz" class="small-link">User guide ↘</a>
+      </div>
+      <p class="subcta">Windows 10 / 11 · 64-bit · MIT license<br>Latest version on GitHub.</p>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="rings"></div>
+      <div class="speedlines"><i></i><i></i><i></i></div>
+      <svg class="mascot" viewBox="0 0 400 470">
+        <!-- bacaklar -->
+        <g fill="none" stroke="#16120f" stroke-width="13" stroke-linecap="round">
+          <path d="M168 318 C160 360 182 382 160 420"/>
+          <path d="M234 318 C244 360 222 384 246 420"/>
+        </g>
+        <!-- ayakkabılar -->
+        <g stroke="#16120f" stroke-width="6">
+          <path d="M112 432 C112 404 168 402 172 426 C176 446 112 450 112 432Z" fill="#ec3b2f"/>
+          <path d="M234 426 C236 402 296 404 296 432 C296 450 232 446 234 426Z" fill="#ec3b2f"/>
+          <ellipse cx="132" cy="420" rx="8" ry="4" fill="#fff" stroke="none"/>
+          <ellipse cx="276" cy="420" rx="8" ry="4" fill="#fff" stroke="none"/>
+        </g>
+        <!-- arkadaki kart -->
+        <rect x="118" y="58" width="200" height="262" rx="26" fill="#43b4ec" stroke="#16120f" stroke-width="7" transform="rotate(8 218 189)"/>
+        <!-- gövde kart -->
+        <g transform="rotate(-4 200 190)">
+          <rect x="96" y="58" width="208" height="266" rx="26" fill="#fffaf0" stroke="#16120f" stroke-width="7"/>
+          <path d="M118 96 h164 M118 296 h164" stroke="#bfe7fb" stroke-width="5"/>
+          <text x="200" y="88" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="26" letter-spacing="2" fill="#16120f">DER · DIE · DAS</text>
+          <!-- gözler -->
+          <g class="blink">
+            <ellipse cx="166" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="6"/>
+            <ellipse cx="236" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="6"/>
+            <path d="M174 152 m-11 0 a11 22 0 1 0 22 0 a11 22 0 1 0 -22 0Z M174 152 l12 -14 l4 10Z" fill="#16120f" fill-rule="evenodd"/>
+            <path d="M244 152 m-11 0 a11 22 0 1 0 22 0 a11 22 0 1 0 -22 0Z M244 152 l12 -14 l4 10Z" fill="#16120f" fill-rule="evenodd"/>
+            <ellipse cx="178" cy="142" rx="3.5" ry="6" fill="#fff"/>
+            <ellipse cx="248" cy="142" rx="3.5" ry="6" fill="#fff"/>
+          </g>
+          <!-- kaşlar -->
+          <path d="M140 108 q24 -18 48 -4 M214 104 q24 -14 48 6" fill="none" stroke="#16120f" stroke-width="7" stroke-linecap="round"/>
+          <!-- yanaklar -->
+          <ellipse cx="132" cy="222" rx="16" ry="10" fill="#ff8fb1"/>
+          <ellipse cx="270" cy="222" rx="16" ry="10" fill="#ff8fb1"/>
+          <!-- ağız -->
+          <path d="M146 214 C160 286 244 286 258 214 C226 230 178 230 146 214Z" fill="#7a1d16" stroke="#16120f" stroke-width="6" stroke-linejoin="round"/>
+          <path d="M176 258 C190 246 214 246 228 258 C214 272 190 272 176 258Z" fill="#ff6f6f"/>
+          <path d="M156 222 C186 232 218 232 248 222 L246 232 C218 240 186 240 158 232Z" fill="#fff"/>
+        </g>
+        <!-- sağ kol: kalça -->
+        <path d="M300 214 C342 224 346 262 316 280" fill="none" stroke="#16120f" stroke-width="13" stroke-linecap="round"/>
+        <use href="#glove" x="290" y="250" width="56" height="56" transform="rotate(200 318 278)"/>
+        <!-- sol kol: el sallama -->
+        <g class="wave">
+          <path d="M102 208 C60 206 44 160 56 118" fill="none" stroke="#16120f" stroke-width="13" stroke-linecap="round"/>
+          <use href="#glove" x="22" y="62" width="70" height="70" transform="rotate(-12 57 97)"/>
+        </g>
+      </svg>
+      
+      <div class="bubble">HALLO!</div>
+      <div class="burst"><svg><use href="#starburst" fill="#ffd23f"/></svg><span>100%<br>FREE!</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<div class="wrap">
+  <div class="numbers" aria-label="The app at a glance">
+    <div class="number"><div class="burst" style="--r:-8deg"><svg><use href="#starburst" fill="#ec3b2f"/></svg><span><strong>1,436</strong></span></div><p>ready-made German<br>words in 10 units</p></div>
+    <div class="number"><div class="burst" style="--r:6deg"><svg><use href="#starburst" fill="#43b4ec"/></svg><span><strong class="lvl">A1–C1</strong></span></div><p>for every level,<br>up to the DSH</p></div>
+    <div class="number"><div class="burst" style="--r:-4deg"><svg><use href="#starburst" fill="#3dbb6e"/></svg><span><strong>5</strong></span></div><p>boxes in the<br>Leitner system</p></div>
+    <div class="number"><div class="burst" style="--r:9deg"><svg><use href="#starburst" fill="#ff8a1f"/></svg><span><strong>10</strong></span></div><p>languages for<br>translations</p></div>
+  </div>
+</div>
+
+<section id="ekranlar" class="tv-sec" aria-labelledby="tv-heading">
+  <div class="wrap tv-grid">
+    <div class="tv-copy">
+      <span class="tag sky">NOW SHOWING</span>
+      <h2 id="tv-heading">A look inside the app.</h2>
+      <p>Flashcards, learning modes and your progress — all on one screen. Switch the channel to see the dark theme too.</p>
+    </div>
+    <figure style="margin:0">
+      <div class="tv">
+        <svg class="tv-antenna" viewBox="0 0 120 72" aria-hidden="true"><path d="M60 70 L18 6 M60 70 L104 10" stroke="#16120f" stroke-width="6" stroke-linecap="round"/><circle cx="18" cy="6" r="7" fill="#ec3b2f" stroke="#16120f" stroke-width="4"/><circle cx="104" cy="10" r="7" fill="#ffd23f" stroke="#16120f" stroke-width="4"/></svg>
+        <button class="screen" id="main-zoom" type="button" aria-label="Enlarge app screenshot">
+          <img id="main-screenshot" src="../assets/app-light.png" alt="Wortschatz Karten light theme: flashcard, filters, learning statistics and controls" width="1180" height="800" fetchpriority="high">
+          <span class="zoom-hint">ZOOM!</span>
+        </button>
+        <div class="tv-controls">
+          <div class="knobs" aria-hidden="true"><i></i><i></i></div>
+          <div class="segmented" role="group" aria-label="Screenshot theme"><button type="button" id="light-btn" aria-pressed="true">Light</button><button type="button" id="dark-btn" aria-pressed="false">Dark</button></div>
+        </div>
+      </div>
+      <figcaption class="caption" id="screen-caption">Flashcards, learning modes and your progress — on one screen.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="ozellikler" class="sec" aria-labelledby="features-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag pink">01 · LEARNING EXPERIENCE</span><h2 id="features-heading" style="margin-top:18px">One step <span class="wobble" style="color:var(--red)">beyond</span> memorising.</h2></div>
+    </div>
+    <div class="features">
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#starburst" fill="#ffd23f" x="0" y="0" width="100" height="100"/><path d="M34 40 h32 M34 52 h24 M34 64 h28" stroke="#16120f" stroke-width="6" stroke-linecap="round"/></svg>
+        <span class="feature-index">01</span>
+        <h3>Learn the context, not just the meaning.</h3><p>Every card back has a German explanation, synonyms and antonyms, translations and example sentences. No word stands alone.</p><span class="inline-note">EXPLANATION · SYNONYM · ANTONYM · EXAMPLE</span>
+      </article>
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="#ec3b2f" stroke="#16120f" stroke-width="6"/><path d="M50 26 v26 l16 10" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/><path d="M50 26 v26 l16 10" fill="none" stroke="#16120f" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="feature-index">02</span>
+        <h3>Go back to what you need, not what you know.</h3><p>New words, cards due for review, recent mistakes or difficult words: pick the learning mode that fits your day.</p><span class="inline-note">SPACED REPETITION · FAVORITES · DIFFICULT WORDS</span>
+      </article>
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M20 40 h16 l20 -18 v56 l-20 -18 h-16z" fill="#43b4ec" stroke="#16120f" stroke-width="6" stroke-linejoin="round"/><path d="M66 36 q10 14 0 28 M76 26 q20 24 0 48" fill="none" stroke="#16120f" stroke-width="6" stroke-linecap="round"/></svg>
+        <span class="feature-index">03</span>
+        <h3>Find your own rhythm — and your voice.</h3><p>Listen to the German pronunciation and see the meaning in your mother tongue. Light or dark theme, all from the keyboard.</p><span class="inline-note">PRONUNCIATION · 10 LANGUAGES · 2 THEMES</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="dene" class="sec demo-sec" aria-labelledby="demo-heading">
+  <div class="wrap demo-grid">
+    <div class="demo-copy">
+      <span class="tag">A SMALL START</span>
+      <h2 id="demo-heading">A word on the front. A connection on the back.</h2>
+      <p>Try to recall the meaning before you flip the card. Then build the connection with the explanation, translation and example.</p>
+      <ol class="check-list">
+        <li><b>1</b>Test yourself first.</li><li><b>2</b>Explore the back of the card.</li><li><b>3</b>In the app, choose “known” or “not known”.</li><li><b>4</b>Leave the review plan to the Leitner system.</li>
+      </ol>
+    </div>
+    <div>
+      <div class="card-wrap">
+        <div class="card-meta"><span class="tag pink">SAMPLE CARD</span><span class="tag sky" id="card-side-label">FRONT / GERMAN</span></div>
+        <div class="flipper" id="flipper">
+          <div class="face front panel" id="card-front">
+            <div class="card-label">NOUN · MASCULINE</div>
+            <h3 lang="de">der Dialekt, -e</h3>
+            <p class="hint">What does this word tell you?</p>
+          </div>
+          <div class="face back panel" id="card-back" aria-hidden="true">
+            <div class="card-label" lang="de">REGIONALE SPRACHFORM</div>
+            <p class="definition">dialect, regional speech</p>
+            <p class="example" lang="de">„In Bayern hört man viele Dialekte.“</p>
+            <div class="word-detail"><span lang="de">Synonym: Mundart</span> · <span lang="de">Antonym: Standardsprache</span></div>
+          </div>
+        </div>
+        <p class="sr" id="card-live" aria-live="polite"></p>
+        <div class="card-controls"><span>Take a moment to remember …</span><button class="btn alt" id="flip-card" type="button" aria-pressed="false">Flip card ↻</button></div>
+      </div>
+      <p class="demo-note">Interactive demo. Trying it here does not affect your progress in the app.</p>
+    </div>
+  </div>
+</section>
+
+<section id="yontem" class="sec method-sec" aria-labelledby="method-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag green">02 · LEITNER SYSTEM</span><h2 id="method-heading" style="margin-top:18px">Come back to every word at the right time.</h2></div>
+      <p>Cards you answer correctly move to the next box and the interval grows. Wrong answers send a card back to box 1, and it comes up again the same day. Click a box!</p>
+    </div>
+    <div class="leitner" role="group" aria-label="Leitner review intervals">
+      <button type="button" class="crate" data-box="1" aria-pressed="true"><span class="flycard" aria-hidden="true">A</span><span class="box"><span class="box-label">BOX 1</span><span class="box-time">1<small>day later</small></span><span class="box-level">First step</span></span></button>
+      <button type="button" class="crate" data-box="2" aria-pressed="false"><span class="flycard" aria-hidden="true">B</span><span class="box"><span class="box-label">BOX 2</span><span class="box-time">2<small>days later</small></span><span class="box-level">A bit more familiar</span></span></button>
+      <button type="button" class="crate" data-box="3" aria-pressed="false"><span class="flycard" aria-hidden="true">C</span><span class="box"><span class="box-label">BOX 3</span><span class="box-time">4<small>days later</small></span><span class="box-level">The connection grows</span></span></button>
+      <button type="button" class="crate" data-box="4" aria-pressed="false"><span class="flycard" aria-hidden="true">D</span><span class="box"><span class="box-label">BOX 4</span><span class="box-time">8<small>days later</small></span><span class="box-level">Longer interval</span></span></button>
+      <button type="button" class="crate" data-box="5" aria-pressed="false"><span class="flycard" aria-hidden="true">★</span><span class="box"><span class="box-label">BOX 5</span><span class="box-time">16<small>days later</small></span><span class="box-level">Learned words</span></span></button>
+    </div>
+    <div class="method-feedback">
+      <svg class="mini" viewBox="80 40 250 300" aria-hidden="true">
+        <rect x="96" y="58" width="208" height="266" rx="26" fill="#fffaf0" stroke="#16120f" stroke-width="8" transform="rotate(-4 200 190)"/>
+        <ellipse cx="166" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="7"/><ellipse cx="236" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="7"/>
+        <ellipse cx="174" cy="156" rx="11" ry="22"/><ellipse cx="244" cy="156" rx="11" ry="22"/>
+        <path d="M150 226 C170 280 238 280 256 222" fill="none" stroke="#16120f" stroke-width="9" stroke-linecap="round"/>
+      </svg>
+      <div class="talk" aria-live="polite"><strong id="box-title">Box 1 · First step</strong><p id="box-description">After a correct answer the first review comes 1 day later. Cards you got wrong come back today.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kilavuz" class="sec guide-sec" aria-labelledby="guide-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag sky">03 · USER GUIDE</span><h2 id="guide-heading" style="margin-top:18px">Five steps <span class="wobble" style="color:var(--sky)">to your first card!</span></h2></div>
+      <p>Everything you need from installing to your first review round. The app’s interface is in German, so menu names are given in German below.</p>
+    </div>
+    <ol class="steps">
+      <li class="step panel"><span class="step-no">1</span><h3>Download</h3><p>Download <code>WortschatzKarten_Setup.exe</code> from the latest release on GitHub.</p><a class="small-link" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest">Go to latest release ↗</a></li>
+      <li class="step panel"><span class="step-no">2</span><h3>Install</h3><p>Run the installer. It installs to <code>Program Files</code> (administrator rights required) and adds a Start menu entry and an uninstaller.</p></li>
+      <li class="step panel"><span class="step-no">3</span><h3>Import the list</h3><p>On first start the app finds the included word list and asks whether to import it. Click <b>Yes</b> — 1,436 words are ready.</p></li>
+      <li class="step panel"><span class="step-no">4</span><h3>Flip the card</h3><p>Look at the word, try to recall its meaning, then press <kbd>Space</kbd> to flip the card.</p></li>
+      <li class="step panel"><span class="step-no">5</span><h3>Answer</h3><p><kbd>2</kbd> “known”, <kbd>1</kbd> “not known”. The Leitner system puts the card in the right box and brings it back at the right time.</p></li>
+    </ol>
+    <div class="smartscreen"><span class="burst mini-burst" aria-hidden="true"><svg><use href="#starburst" fill="#ffd23f"/></svg><span>!</span></span><p><b>If Windows warns you:</b> the installer is not code-signed yet, so SmartScreen may warn about an unknown publisher: <b>More info → Run anyway</b>. You can check the download against the SHA-256 checksum in the release notes.</p></div>
+    <div class="guide-grid">
+      <article class="panel guide-card">
+        <span class="tag pink">KEYBOARD SHORTCUTS</span>
+        <h3>No mouse needed.</h3>
+        <dl class="keys">
+          <div><dt><kbd>Space</kbd></dt><dd>Flip card</dd></div>
+          <div><dt><kbd>→</kbd> <kbd>Enter</kbd></dt><dd>Next card</dd></div>
+          <div><dt><kbd>←</kbd></dt><dd>Previous card</dd></div>
+          <div><dt><kbd>1</kbd> <kbd>2</kbd></dt><dd>Not known / Known</dd></div>
+          <div><dt><kbd>S</kbd></dt><dd>Pronunciation</dd></div>
+          <div><dt><kbd>F</kbd> <kbd>D</kbd></dt><dd>Favorite / Difficult</dd></div>
+          <div><dt><kbd>M</kbd></dt><dd>Shuffle</dd></div>
+          <div><dt><kbd>Ctrl</kbd>+<kbd>O</kbd></dt><dd>Update the Excel file</dd></div>
+          <div><dt><kbd>Ctrl</kbd>+<kbd>E</kbd></dt><dd>Export favorites &amp; difficult words</dd></div>
+        </dl>
+      </article>
+      <article class="panel guide-card">
+        <span class="tag green">LEARNING MODES</span>
+        <h3>What do you need today?</h3>
+        <ul class="modes"><li><b>Review:</b> due cards plus new words</li><li><b>All cards:</b> the whole list</li><li><b>New only:</b> words you have never seen</li><li><b>Last wrong:</b> your most recent mistakes</li><li><b>Favorites</b> and <b>difficult words</b></li></ul>
+        <p class="guide-note">Filter any mode by unit and section. The statistics window shows the Leitner boxes, your hit rate and results per unit.</p>
+      </article>
+      <article class="panel guide-card">
+        <span class="tag">SETTINGS &amp; DATA</span>
+        <h3>Everything stays on your PC.</h3>
+        <ul class="modes"><li>Light / dark theme and your mother tongue right in the app.</li><li>Your word list, progress and settings live in <code>%APPDATA%\WortschatzKarten\</code>.</li><li>Start over: <b lang="de">Daten → Lernfortschritt zurücksetzen</b>.</li><li>Your own list: <b lang="de">Daten → Excel aktualisieren…</b> (<kbd>Ctrl</kbd>+<kbd>O</kbd>).</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="excel" class="sec excel-sec" aria-labelledby="excel-heading">
+  <div class="wrap excel-grid">
+    <div class="excel-sheet panel" aria-hidden="true">
+      <div class="sheet-bar"><i></i><i></i><i></i><span>DSH_Wortschatz_Table.xlsx</span></div>
+      <table>
+        <tr><th>Unite</th><th>Deutsche Word</th><th>Erklärung</th><th>Turkish</th></tr>
+        <tr><td>1</td><td>der Dialekt</td><td>regionale Sprachform</td><td>lehçe</td></tr>
+        <tr><td>1</td><td>die Mundart</td><td>Dialekt</td><td>ağız</td></tr>
+        <tr><td>2</td><td>…</td><td>…</td><td>…</td></tr>
+      </table>
+      <span class="burst sheet-burst"><svg><use href="#starburst" fill="#3dbb6e"/></svg><span>1,436<br>WORDS</span></span>
+    </div>
+    <div>
+      <span class="tag green">EXCEL WORD LIST</span>
+      <h2 id="excel-heading" style="margin:18px 0 16px">Download the list, make it your own.</h2>
+      <p>The included DSH word list is a single Excel file. Print it, add your own notes, or use it as a template for your own list — whether you are at A1 or C1.</p>
+      <div class="hero-actions" style="margin:26px 0 22px">
+        <a class="btn" style="--bg:var(--green)" href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 8l8 8M16 8l-8 8" stroke-linecap="round"/></svg>Download Excel list</a>
+        <a class="small-link" href="https://github.com/smyrna-pergamum/wortschatz-karten/blob/main/DSH_Wortschatz_Table.xlsx" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+      <details class="cols"><summary>Columns for your own list</summary>
+        <div class="cols-body">
+          <p>The header row must be within the first 15 rows. German, English and Turkish column names are recognised. Only the <b>word</b> column is required.</p>
+          <table class="col-table">
+            <tr><th>Column</th><th>Meaning</th><th>Required</th></tr>
+            <tr><td><code>Unite</code> / <code>Lektion</code></td><td>Unit</td><td>no*</td></tr>
+            <tr><td><code>Abschnitt</code></td><td>Section / topic</td><td>no</td></tr>
+            <tr><td><code>Deutsche Word</code> / <code>Wort</code></td><td>German word</td><td><b>yes</b></td></tr>
+            <tr><td><code>Erklärung</code></td><td>German explanation</td><td>no</td></tr>
+            <tr><td><code>Synonym</code> / <code>Antonym</code></td><td>Synonyms / antonyms</td><td>no</td></tr>
+            <tr><td><code>English</code></td><td>English meaning</td><td>no</td></tr>
+            <tr><td><code>Turkish</code> / <code>Muttersprache</code></td><td>Turkish meaning</td><td>no</td></tr>
+            <tr><td><code>Beispiel</code></td><td>Example sentence</td><td>no</td></tr>
+          </table>
+          <p class="guide-note">* Without a unit column, the sheet name is used. When you re-import an updated list, progress is matched by unit and word and kept.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="insights-heading">
+  <div class="wrap insights">
+    <div class="stats-panel">
+      <span class="tag">04 · SEE YOUR PROGRESS</span>
+      <h2 id="insights-heading">Small steps, visible progress.</h2>
+      <p>How many words have you studied, which unit was hard, which cards are waiting? The statistics window gives you the overview.</p>
+      <button class="frame" id="stats-zoom" type="button" aria-label="Enlarge learning statistics"><img src="../assets/stats.png" alt="Learning statistics: card counts, Leitner boxes, hit rate and results per unit" width="820" height="680" loading="lazy"><span class="zoom-hint" aria-hidden="true">ZOOM!</span></button>
+      <p class="stats-caption">A sample session: results per unit and the distribution across Leitner boxes.</p>
+    </div>
+    <aside class="aside-features" aria-label="More features">
+      <article class="aside-feature panel"><span class="tag">YOUR LIST, YOUR GOAL</span><h3>Bring your own vocabulary book.</h3><p>Import your own Excel file — for any level from A1 to C1. Updating it keeps your progress. Export favorites and difficult words to Excel.</p></article>
+      <article class="aside-feature panel"><span class="tag pink">A BRIDGE TO YOUR LANGUAGE</span><h3>One word. Many languages.</h3><p>See the German word and example sentence in one of the supported languages.</p><div class="languages"><span>Turkish</span><span>English</span><span>Arabic</span><span>Russian</span><span>Persian</span><span>Spanish</span><span>French</span><span>Italian</span><span>Polish</span><span>Ukrainian</span></div></article>
+      <article class="aside-feature panel"><span class="tag sky">NO ACCOUNT</span><h3>Your study space, on your own PC.</h3><p>No account needed. Word lists, progress and settings stay on your computer. Details about the optional online translation and pronunciation are below.</p></article>
+    </aside>
+  </div>
+</section>
+
+<section id="sorular" class="sec faq-sec" aria-labelledby="faq-heading">
+  <div class="wrap faq">
+    <div>
+      <span class="tag">05 · FREQUENTLY ASKED</span>
+      <h2 id="faq-heading">Before you start.</h2>
+      <p class="faq-intro">A more technical question?<br><a href="https://github.com/smyrna-pergamum/wortschatz-karten#readme" target="_blank" rel="noopener">Read the project docs ↗</a></p>
+    </div>
+    <div><details><summary>Who is the app for?</summary><p>For anyone learning German — from A1 to C1 — and for students preparing for the DSH. The included list covers DSH vocabulary; with your own Excel list you can study at any level. The app’s interface is in German.</p></details>
+      <details><summary>Is it really free?</summary><p>Yes. Wortschatz Karten is free and open source under the MIT license. The source code is on GitHub. No account is needed.</p></details>
+      <details><summary>Which devices does it run on?</summary><p>The installer is for Windows 10 and Windows 11, 64-bit. The card on this page is only a demo; the full app is installed on Windows.</p></details>
+      <details><summary>Do I need an internet connection?</summary><p>Flashcards and progress tracking work offline. The optional translation and online pronunciation need internet; results are cached. For translation, the German word and example sentence are sent to Google Translate (sentences fall back to MyMemory); for online pronunciation, the word is sent to Google’s text-to-speech service. With a German Windows voice, pronunciation also works offline.</p></details>
+      <details><summary>Can I add my own words?</summary><p>Yes. Use <span lang="de">Daten → Excel aktualisieren…</span> to import your Excel (.xlsx) file. Only the word column is required; explanation, translation, synonyms, antonyms and example sentences are optional. <a href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>Download the sample file.</a> The column list is in the <a href="#excel">Excel section</a>.</p></details>
+      <details><summary>How do I install it?</summary><p>The download button takes you to the latest release on GitHub. Download <strong>WortschatzKarten_Setup.exe</strong> and follow the installer (administrator rights required). On first start, accept the offer to import the word list. Step by step: <a href="#kilavuz">user guide</a>.</p></details></div>
+  </div>
+</section>
+
+<section id="indir" class="download-sec" aria-labelledby="download-heading">
+  <div class="wrap">
+    <div class="iris iris-reveal" id="iris">
+      <div class="iris-inner">
+        <span class="tag">READY FOR YOUR NEXT WORD?</span>
+        <h2 id="download-heading">Start today with one card!</h2>
+        <p>With the ready-made DSH list or your own. A little practice, a new beginning.</p>
+        <div class="download-links">
+          <a class="btn download-latest" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Free download ↓</a>
+          <a class="btn alt" href="https://github.com/smyrna-pergamum/wortschatz-karten" target="_blank" rel="noopener">Source code ↗</a>
+        </div>
+        <div class="download-foot">Windows 10 / 11 · 64 bit · GitHub Releases</div>
+      </div>
+    </div>
+    <div class="iris-extra">
+      <a class="btn" style="--bg:var(--green)" href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>Download Excel list ↓</a>
+      <a class="btn sky" href="#kilavuz">User guide ↑</a>
+    </div>
+    <div class="privacy-line"><span>FREE &amp; OPEN SOURCE</span><span>NO ACCOUNT NEEDED</span><span>PROGRESS STAYS ON YOUR PC</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-main">
+      <a href="#" class="logo">Wortschatz Karten</a>
+      <div class="footer-links"><a href="#kilavuz">User guide</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>Excel list ↓</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/issues" target="_blank" rel="noopener">Feedback ↗</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/blob/main/LICENSE" target="_blank" rel="noopener">MIT license ↗</a><a href="#main">Back to top ↑</a></div>
+    </div>
+    <div class="footer-bottom"><p>It starts with a word. Every review is one step further!</p><span>An independent, open-source tool for learning German.</span></div>
+  </div>
+</footer>
+
+<dialog id="image-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-head"><span id="dialog-title">App · Light theme</span><button type="button" id="close-dialog">Close ×</button></div>
+  <img id="dialog-image" class="dialog-img" src="../assets/app-light.png" alt="Wortschatz Karten light theme: flashcard, filters, learning statistics and controls">
+</dialog>
+
+<script>window.T={"altLight": "Wortschatz Karten light theme: flashcard, filters, learning statistics and controls", "altDark": "Wortschatz Karten dark theme: German explanation, translations and example sentence", "altStats": "Learning statistics: card counts, Leitner boxes, hit rate and results per unit", "capLight": "Flashcards, learning modes and your progress — on one screen.", "capDark": "The back of a card: explanation, translation, synonyms and antonyms.", "sideFront": "FRONT / GERMAN", "sideBack": "BACK / MEANING & CONTEXT", "flip": "Flip card ↻", "flipBack": "Back to the front ↻", "liveFront": "Front: der Dialekt.", "liveBack": "Back: dialect, regional speech. In Bayern hört man viele Dialekte. Synonym: Mundart, antonym: Standardsprache.", "box": "Box", "boxes": [["First step", "After a correct answer the first review comes 1 day later. Cards you got wrong come back today."], ["A bit more familiar", "In box 2, a correctly answered card gets a new interval of 2 days."], ["The connection grows", "In box 3 the interval rises to 4 days. You study the words you remember less often."], ["Longer interval", "Cards in box 4 are reviewed after 8 days. A wrong answer means back to box 1."], ["Learned words", "Cards in box 5 count as learned and are reviewed every 16 days."]], "dlgLight": "App · Light theme", "dlgDark": "App · Dark theme", "dlgStats": "Learning statistics"};</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>

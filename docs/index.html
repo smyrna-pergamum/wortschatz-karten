@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wortschatz Karten</title>
+<link rel="alternate" hreflang="de" href="de/">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="alternate" hreflang="tr" href="tr/">
+<script>
+(function(){var l;try{l=localStorage.getItem('wk-lang')}catch(e){}
+var langs=['de','en','tr'];if(langs.indexOf(l)<0){l=(navigator.languages||[navigator.language||'']).map(function(x){return String(x).slice(0,2).toLowerCase()}).filter(function(x){return langs.indexOf(x)>=0})[0]||'de'}
+location.replace(l+'/'+location.hash)})();
+</script>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#ffd23f;color:#16120f;font:600 18px Arial,sans-serif}nav{display:flex;gap:12px}a{color:inherit;border:3px solid #16120f;border-radius:999px;padding:8px 16px;background:#fff;text-decoration:none}</style>
+</head>
+<body><nav aria-label="Sprache / Language / Dil"><a href="de/" hreflang="de">Deutsch</a><a href="en/" hreflang="en">English</a><a href="tr/" hreflang="tr">Türkçe</a></nav></body>
+</html>
