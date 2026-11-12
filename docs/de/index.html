@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="de" data-assets="../assets/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Wortschatz Karten: kostenlose Karteikarten-App für Windows. Deutsch von A1 bis C1 und für die DSH. 1.436 Wörter, Leitner-System, Aussprache und Übersetzung in 10 Sprachen.">
+<meta name="theme-color" content="#ffd23f">
+<title>Wortschatz Karten — Es beginnt mit einem Wort!</title>
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="en" href="../en/">
+<link rel="alternate" hreflang="tr" href="../tr/">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a href="#main" class="skip">Zum Inhalt</a>
+<!-- Paylaşılan SVG tanımları: "kaynayan çizgi" filtresi ve ortak şekiller -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="boil" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence id="boil-noise" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <symbol id="starburst" viewBox="-100 -100 200 200">
+      <polygon points="0,-96 18,-52 60,-76 48,-30 94,-30 58,0 94,30 48,30 60,76 18,52 0,96 -18,52 -60,76 -48,30 -94,30 -58,0 -94,-30 -48,-30 -60,-76 -18,-52" stroke="#16120f" stroke-width="7" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="glove" viewBox="-40 -40 80 80">
+      <g stroke="#16120f" stroke-width="5" fill="#fff" stroke-linejoin="round">
+        <rect x="-16" y="16" width="32" height="16" rx="6"/>
+        <ellipse cx="-14" cy="-14" rx="9" ry="18" transform="rotate(-18 -14 -14)"/>
+        <ellipse cx="2" cy="-20" rx="9" ry="19"/>
+        <ellipse cx="17" cy="-14" rx="9" ry="17" transform="rotate(16 17 -14)"/>
+        <circle cx="0" cy="2" r="22"/>
+        <ellipse cx="-22" cy="4" rx="9" ry="14" transform="rotate(-40 -22 4)"/>
+        <path d="M-6 -4 v12 M6 -4 v12" fill="none" stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Wortschatz Karten, zum Seitenanfang">
+      <svg class="logo-mark" viewBox="0 0 60 60" aria-hidden="true"><rect x="12" y="6" width="38" height="48" rx="7" fill="#43b4ec" stroke="#16120f" stroke-width="4" transform="rotate(10 31 30)"/><rect x="8" y="6" width="38" height="48" rx="7" fill="#fff" stroke="#16120f" stroke-width="4" transform="rotate(-6 27 30)"/><ellipse cx="21" cy="25" rx="4" ry="6"/><ellipse cx="33" cy="24" rx="4" ry="6"/><path d="M19 36 q8 9 16 -1" fill="#ec3b2f" stroke="#16120f" stroke-width="3" stroke-linecap="round"/></svg>
+      <span class="logo-text">Wortschatz Karten</span>
+    </a>
+    <nav class="navlinks" aria-label="Hauptmenü">
+      <a href="#ozellikler">Funktionen</a><a href="#dene">Karte testen</a><a href="#yontem">So funktioniert’s</a><a href="#kilavuz">Anleitung</a><a href="#excel">Excel-Liste</a><a href="#sorular">Fragen</a>
+    </nav>
+    <div class="topbar-right">
+      <a class="gh" href="https://github.com/smyrna-pergamum/wortschatz-karten" target="_blank" rel="noopener">GitHub ↗</a>
+      <nav class="lang" aria-label="Sprache"><a href="../de/" hreflang="de" lang="de" title="Deutsch" aria-current="page">DE</a><a href="../en/" hreflang="en" lang="en" title="English">EN</a><a href="../tr/" hreflang="tr" lang="tr" title="Türkçe">TR</a></nav>
+      <a class="btn" href="#indir"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="tag">DEUTSCH VON A1 BIS C1 &amp; DSH</span>
+      <h1 id="hero-heading"><span class="l1">Lerne ein Wort.</span><span class="l2"><span>Entdecke</span> <span>eine</span> <span>Welt!</span></span></h1>
+      <p class="lead">Ein Wort zu sehen ist eins, es wirklich zu lernen etwas anderes. Mit Erklärungen, Beispielsätzen und Wiederholung im richtigen Abstand baust du deinen deutschen Wortschatz Schritt für Schritt auf — vom ersten A1-Wort bis zur DSH.</p>
+      <div class="hero-actions">
+        <a class="btn download-latest" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Kostenlos laden<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v11m-4-4 4 4 4-4M3 14v4h14v-4"/></svg></a>
+        <a href="#dene" class="small-link">Erst eine Karte testen ↘</a>
+        <a href="#excel" class="small-link">Excel-Wortliste ↘</a>
+        <a href="#kilavuz" class="small-link">Anleitung ↘</a>
+      </div>
+      <p class="subcta">Windows 10 / 11 · 64 Bit · MIT-Lizenz<br>Die neueste Version gibt es auf GitHub.</p>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="rings"></div>
+      <div class="speedlines"><i></i><i></i><i></i></div>
+      <svg class="mascot" viewBox="0 0 400 470">
+        <!-- bacaklar -->
+        <g fill="none" stroke="#16120f" stroke-width="13" stroke-linecap="round">
+          <path d="M168 318 C160 360 182 382 160 420"/>
+          <path d="M234 318 C244 360 222 384 246 420"/>
+        </g>
+        <!-- ayakkabılar -->
+        <g stroke="#16120f" stroke-width="6">
+          <path d="M112 432 C112 404 168 402 172 426 C176 446 112 450 112 432Z" fill="#ec3b2f"/>
+          <path d="M234 426 C236 402 296 404 296 432 C296 450 232 446 234 426Z" fill="#ec3b2f"/>
+          <ellipse cx="132" cy="420" rx="8" ry="4" fill="#fff" stroke="none"/>
+          <ellipse cx="276" cy="420" rx="8" ry="4" fill="#fff" stroke="none"/>
+        </g>
+        <!-- arkadaki kart -->
+        <rect x="118" y="58" width="200" height="262" rx="26" fill="#43b4ec" stroke="#16120f" stroke-width="7" transform="rotate(8 218 189)"/>
+        <!-- gövde kart -->
+        <g transform="rotate(-4 200 190)">
+          <rect x="96" y="58" width="208" height="266" rx="26" fill="#fffaf0" stroke="#16120f" stroke-width="7"/>
+          <path d="M118 96 h164 M118 296 h164" stroke="#bfe7fb" stroke-width="5"/>
+          <text x="200" y="88" text-anchor="middle" font-family="Bangers, Impact, sans-serif" font-size="26" letter-spacing="2" fill="#16120f">DER · DIE · DAS</text>
+          <!-- gözler -->
+          <g class="blink">
+            <ellipse cx="166" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="6"/>
+            <ellipse cx="236" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="6"/>
+            <path d="M174 152 m-11 0 a11 22 0 1 0 22 0 a11 22 0 1 0 -22 0Z M174 152 l12 -14 l4 10Z" fill="#16120f" fill-rule="evenodd"/>
+            <path d="M244 152 m-11 0 a11 22 0 1 0 22 0 a11 22 0 1 0 -22 0Z M244 152 l12 -14 l4 10Z" fill="#16120f" fill-rule="evenodd"/>
+            <ellipse cx="178" cy="142" rx="3.5" ry="6" fill="#fff"/>
+            <ellipse cx="248" cy="142" rx="3.5" ry="6" fill="#fff"/>
+          </g>
+          <!-- kaşlar -->
+          <path d="M140 108 q24 -18 48 -4 M214 104 q24 -14 48 6" fill="none" stroke="#16120f" stroke-width="7" stroke-linecap="round"/>
+          <!-- yanaklar -->
+          <ellipse cx="132" cy="222" rx="16" ry="10" fill="#ff8fb1"/>
+          <ellipse cx="270" cy="222" rx="16" ry="10" fill="#ff8fb1"/>
+          <!-- ağız -->
+          <path d="M146 214 C160 286 244 286 258 214 C226 230 178 230 146 214Z" fill="#7a1d16" stroke="#16120f" stroke-width="6" stroke-linejoin="round"/>
+          <path d="M176 258 C190 246 214 246 228 258 C214 272 190 272 176 258Z" fill="#ff6f6f"/>
+          <path d="M156 222 C186 232 218 232 248 222 L246 232 C218 240 186 240 158 232Z" fill="#fff"/>
+        </g>
+        <!-- sağ kol: kalça -->
+        <path d="M300 214 C342 224 346 262 316 280" fill="none" stroke="#16120f" stroke-width="13" stroke-linecap="round"/>
+        <use href="#glove" x="290" y="250" width="56" height="56" transform="rotate(200 318 278)"/>
+        <!-- sol kol: el sallama -->
+        <g class="wave">
+          <path d="M102 208 C60 206 44 160 56 118" fill="none" stroke="#16120f" stroke-width="13" stroke-linecap="round"/>
+          <use href="#glove" x="22" y="62" width="70" height="70" transform="rotate(-12 57 97)"/>
+        </g>
+      </svg>
+      
+      <div class="bubble">HALLO!</div>
+      <div class="burst"><svg><use href="#starburst" fill="#ffd23f"/></svg><span>100%<br>GRATIS!</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<div class="wrap">
+  <div class="numbers" aria-label="Kurz zur App">
+    <div class="number"><div class="burst" style="--r:-8deg"><svg><use href="#starburst" fill="#ec3b2f"/></svg><span><strong>1.436</strong></span></div><p>fertige deutsche<br>Wörter in 10 Einheiten</p></div>
+    <div class="number"><div class="burst" style="--r:6deg"><svg><use href="#starburst" fill="#43b4ec"/></svg><span><strong class="lvl">A1–C1</strong></span></div><p>für alle Niveaus,<br>bis zur DSH</p></div>
+    <div class="number"><div class="burst" style="--r:-4deg"><svg><use href="#starburst" fill="#3dbb6e"/></svg><span><strong>5</strong></span></div><p>Boxen im<br>Leitner-System</p></div>
+    <div class="number"><div class="burst" style="--r:9deg"><svg><use href="#starburst" fill="#ff8a1f"/></svg><span><strong>10</strong></span></div><p>Sprachen für<br>Übersetzungen</p></div>
+  </div>
+</div>
+
+<section id="ekranlar" class="tv-sec" aria-labelledby="tv-heading">
+  <div class="wrap tv-grid">
+    <div class="tv-copy">
+      <span class="tag sky">JETZT LIVE</span>
+      <h2 id="tv-heading">Ein Blick in die App.</h2>
+      <p>Karteikarten, Lernmodi und dein Fortschritt — alles auf einem Bildschirm. Schalte um und sieh dir auch das dunkle Design an.</p>
+    </div>
+    <figure style="margin:0">
+      <div class="tv">
+        <svg class="tv-antenna" viewBox="0 0 120 72" aria-hidden="true"><path d="M60 70 L18 6 M60 70 L104 10" stroke="#16120f" stroke-width="6" stroke-linecap="round"/><circle cx="18" cy="6" r="7" fill="#ec3b2f" stroke="#16120f" stroke-width="4"/><circle cx="104" cy="10" r="7" fill="#ffd23f" stroke="#16120f" stroke-width="4"/></svg>
+        <button class="screen" id="main-zoom" type="button" aria-label="Screenshot der App vergrößern">
+          <img id="main-screenshot" src="../assets/app-light.png" alt="Wortschatz Karten im hellen Design: Karteikarte, Filter, Lernstatistik und Bedienknöpfe" width="1180" height="800" fetchpriority="high">
+          <span class="zoom-hint">GRÖSSER!</span>
+        </button>
+        <div class="tv-controls">
+          <div class="knobs" aria-hidden="true"><i></i><i></i></div>
+          <div class="segmented" role="group" aria-label="Design des Screenshots"><button type="button" id="light-btn" aria-pressed="true">Hell</button><button type="button" id="dark-btn" aria-pressed="false">Dunkel</button></div>
+        </div>
+      </div>
+      <figcaption class="caption" id="screen-caption">Karteikarten, Lernmodi und dein Fortschritt — auf einem Bildschirm.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="ozellikler" class="sec" aria-labelledby="features-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag pink">01 · LERNERLEBNIS</span><h2 id="features-heading" style="margin-top:18px">Einen Schritt <span class="wobble" style="color:var(--red)">weiter</span> als Auswendiglernen.</h2></div>
+    </div>
+    <div class="features">
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><use href="#starburst" fill="#ffd23f" x="0" y="0" width="100" height="100"/><path d="M34 40 h32 M34 52 h24 M34 64 h28" stroke="#16120f" stroke-width="6" stroke-linecap="round"/></svg>
+        <span class="feature-index">01</span>
+        <h3>Nicht nur die Bedeutung, auch den Kontext lernen.</h3><p>Auf jeder Rückseite: deutsche Erklärung, Synonyme und Antonyme, Übersetzungen und Beispielsätze. Kein Wort steht allein.</p><span class="inline-note">ERKLÄRUNG · SYNONYM · ANTONYM · BEISPIEL</span>
+      </article>
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="40" fill="#ec3b2f" stroke="#16120f" stroke-width="6"/><path d="M50 26 v26 l16 10" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/><path d="M50 26 v26 l16 10" fill="none" stroke="#16120f" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="feature-index">02</span>
+        <h3>Zurück zu dem, was du brauchst.</h3><p>Neue Wörter, fällige Wiederholungen, zuletzt falsch beantwortete oder schwierige Wörter: Wähle den Lernmodus, der heute passt.</p><span class="inline-note">WIEDERHOLUNG · FAVORITEN · SCHWIERIGE WÖRTER</span>
+      </article>
+      <article class="feature panel">
+        <svg class="icon" viewBox="0 0 100 100" aria-hidden="true"><path d="M20 40 h16 l20 -18 v56 l-20 -18 h-16z" fill="#43b4ec" stroke="#16120f" stroke-width="6" stroke-linejoin="round"/><path d="M66 36 q10 14 0 28 M76 26 q20 24 0 48" fill="none" stroke="#16120f" stroke-width="6" stroke-linecap="round"/></svg>
+        <span class="feature-index">03</span>
+        <h3>Finde deinen Rhythmus — und deine Stimme.</h3><p>Hör dir die deutsche Aussprache an und sieh die Bedeutung in deiner Muttersprache. Helles oder dunkles Design, alles per Tastatur.</p><span class="inline-note">AUSSPRACHE · 10 SPRACHEN · 2 DESIGNS</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="dene" class="sec demo-sec" aria-labelledby="demo-heading">
+  <div class="wrap demo-grid">
+    <div class="demo-copy">
+      <span class="tag">EIN KLEINER ANFANG</span>
+      <h2 id="demo-heading">Vorne ein Wort. Hinten eine Verbindung.</h2>
+      <p>Versuch dich an die Bedeutung zu erinnern, bevor du die Karte umdrehst. Dann knüpfst du die Verbindung mit Erklärung, Übersetzung und Beispiel.</p>
+      <ol class="check-list">
+        <li><b>1</b>Erst selbst testen.</li><li><b>2</b>Die Rückseite entdecken.</li><li><b>3</b>In der App „gewusst“ oder „nicht gewusst“ wählen.</li><li><b>4</b>Den Wiederholungsplan dem Leitner-System überlassen.</li>
+      </ol>
+    </div>
+    <div>
+      <div class="card-wrap">
+        <div class="card-meta"><span class="tag pink">BEISPIELKARTE</span><span class="tag sky" id="card-side-label">VORDERSEITE / DEUTSCH</span></div>
+        <div class="flipper" id="flipper">
+          <div class="face front panel" id="card-front">
+            <div class="card-label">NOMEN · MASKULIN</div>
+            <h3 lang="de">der Dialekt, -e</h3>
+            <p class="hint">Was sagt dir dieses Wort?</p>
+          </div>
+          <div class="face back panel" id="card-back" aria-hidden="true">
+            <div class="card-label" lang="de">REGIONALE SPRACHFORM</div>
+            <p class="definition">Mundart, regionale Sprache</p>
+            <p class="example" lang="de">„In Bayern hört man viele Dialekte.“</p>
+            <div class="word-detail"><span lang="de">Synonym: Mundart</span> · <span lang="de">Antonym: Standardsprache</span></div>
+          </div>
+        </div>
+        <p class="sr" id="card-live" aria-live="polite"></p>
+        <div class="card-controls"><span>Nimm dir einen Moment zum Erinnern …</span><button class="btn alt" id="flip-card" type="button" aria-pressed="false">Karte umdrehen ↻</button></div>
+      </div>
+      <p class="demo-note">Interaktives Beispiel. Dieser Test wirkt sich nicht auf deinen Lernfortschritt in der App aus.</p>
+    </div>
+  </div>
+</section>
+
+<section id="yontem" class="sec method-sec" aria-labelledby="method-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag green">02 · LEITNER-SYSTEM</span><h2 id="method-heading" style="margin-top:18px">Jedes Wort kommt zur richtigen Zeit zurück.</h2></div>
+      <p>Richtig beantwortete Karten wandern in die nächste Box, der Abstand wird größer. Falsch beantwortete kommen zurück in Box 1 und am selben Tag noch einmal dran. Klick auf eine Box!</p>
+    </div>
+    <div class="leitner" role="group" aria-label="Leitner-Wiederholungsabstände">
+      <button type="button" class="crate" data-box="1" aria-pressed="true"><span class="flycard" aria-hidden="true">A</span><span class="box"><span class="box-label">BOX 1</span><span class="box-time">1<small>Tag später</small></span><span class="box-level">Erster Schritt</span></span></button>
+      <button type="button" class="crate" data-box="2" aria-pressed="false"><span class="flycard" aria-hidden="true">B</span><span class="box"><span class="box-label">BOX 2</span><span class="box-time">2<small>Tage später</small></span><span class="box-level">Schon vertrauter</span></span></button>
+      <button type="button" class="crate" data-box="3" aria-pressed="false"><span class="flycard" aria-hidden="true">C</span><span class="box"><span class="box-label">BOX 3</span><span class="box-time">4<small>Tage später</small></span><span class="box-level">Die Verbindung wächst</span></span></button>
+      <button type="button" class="crate" data-box="4" aria-pressed="false"><span class="flycard" aria-hidden="true">D</span><span class="box"><span class="box-label">BOX 4</span><span class="box-time">8<small>Tage später</small></span><span class="box-level">Längerer Abstand</span></span></button>
+      <button type="button" class="crate" data-box="5" aria-pressed="false"><span class="flycard" aria-hidden="true">★</span><span class="box"><span class="box-label">BOX 5</span><span class="box-time">16<small>Tage später</small></span><span class="box-level">Gelernte Wörter</span></span></button>
+    </div>
+    <div class="method-feedback">
+      <svg class="mini" viewBox="80 40 250 300" aria-hidden="true">
+        <rect x="96" y="58" width="208" height="266" rx="26" fill="#fffaf0" stroke="#16120f" stroke-width="8" transform="rotate(-4 200 190)"/>
+        <ellipse cx="166" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="7"/><ellipse cx="236" cy="160" rx="26" ry="38" fill="#fff" stroke="#16120f" stroke-width="7"/>
+        <ellipse cx="174" cy="156" rx="11" ry="22"/><ellipse cx="244" cy="156" rx="11" ry="22"/>
+        <path d="M150 226 C170 280 238 280 256 222" fill="none" stroke="#16120f" stroke-width="9" stroke-linecap="round"/>
+      </svg>
+      <div class="talk" aria-live="polite"><strong id="box-title">Box 1 · Erster Schritt</strong><p id="box-description">Nach einer richtigen Antwort kommt die erste Wiederholung nach 1 Tag. Falsch beantwortete Karten kommen heute noch einmal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kilavuz" class="sec guide-sec" aria-labelledby="guide-heading">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag sky">03 · ANLEITUNG</span><h2 id="guide-heading" style="margin-top:18px">In fünf Schritten <span class="wobble" style="color:var(--sky)">zur ersten Karte!</span></h2></div>
+      <p>Alles, was du von der Installation bis zur ersten Wiederholungsrunde brauchst. Die App ist auf Deutsch — die Menünamen stehen hier im Original.</p>
+    </div>
+    <ol class="steps">
+      <li class="step panel"><span class="step-no">1</span><h3>Herunterladen</h3><p>Lade <code>WortschatzKarten_Setup.exe</code> aus der neuesten Version auf GitHub herunter.</p><a class="small-link" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest">Zur neuesten Version ↗</a></li>
+      <li class="step panel"><span class="step-no">2</span><h3>Installieren</h3><p>Starte das Setup. Die App wird unter <code>Program Files</code> installiert (Administratorrechte nötig), mit Startmenü-Eintrag und Deinstallationsprogramm.</p></li>
+      <li class="step panel"><span class="step-no">3</span><h3>Liste importieren</h3><p>Beim ersten Start findet die App die mitgelieferte Wortliste und fragt, ob sie importiert werden soll. Klick auf <b>Ja</b> — 1.436 Wörter sind bereit.</p></li>
+      <li class="step panel"><span class="step-no">4</span><h3>Karte umdrehen</h3><p>Sieh dir das Wort an, versuche dich an die Bedeutung zu erinnern, und dreh die Karte mit <kbd>Space</kbd> um.</p></li>
+      <li class="step panel"><span class="step-no">5</span><h3>Antworten</h3><p><kbd>2</kbd> „gewusst“, <kbd>1</kbd> „nicht gewusst“. Das Leitner-System legt die Karte in die richtige Box und bringt sie zur richtigen Zeit zurück.</p></li>
+    </ol>
+    <div class="smartscreen"><span class="burst mini-burst" aria-hidden="true"><svg><use href="#starburst" fill="#ffd23f"/></svg><span>!</span></span><p><b>Falls Windows warnt:</b> Das Setup ist noch nicht signiert. SmartScreen kann vor einem „unbekannten Herausgeber“ warnen: <b>Weitere Informationen → Trotzdem ausführen</b>. Du kannst den Download mit der SHA-256-Prüfsumme in den Release-Notes vergleichen.</p></div>
+    <div class="guide-grid">
+      <article class="panel guide-card">
+        <span class="tag pink">TASTENKÜRZEL</span>
+        <h3>Ganz ohne Maus.</h3>
+        <dl class="keys">
+          <div><dt><kbd>Space</kbd></dt><dd>Karte umdrehen</dd></div>
+          <div><dt><kbd>→</kbd> <kbd>Enter</kbd></dt><dd>Nächste Karte</dd></div>
+          <div><dt><kbd>←</kbd></dt><dd>Vorherige Karte</dd></div>
+          <div><dt><kbd>1</kbd> <kbd>2</kbd></dt><dd>Nicht gewusst / Gewusst</dd></div>
+          <div><dt><kbd>S</kbd></dt><dd>Aussprache</dd></div>
+          <div><dt><kbd>F</kbd> <kbd>D</kbd></dt><dd>Favorit / Schwierig</dd></div>
+          <div><dt><kbd>M</kbd></dt><dd>Mischen</dd></div>
+          <div><dt><kbd>Ctrl</kbd>+<kbd>O</kbd></dt><dd>Excel-Datei aktualisieren</dd></div>
+          <div><dt><kbd>Ctrl</kbd>+<kbd>E</kbd></dt><dd>Favoriten &amp; schwierige Wörter exportieren</dd></div>
+        </dl>
+      </article>
+      <article class="panel guide-card">
+        <span class="tag green">LERNMODI</span>
+        <h3>Was brauchst du heute?</h3>
+        <ul class="modes"><li><b>Wiederholung:</b> fällige und neue Karten</li><li><b>Alle Karten:</b> die ganze Liste</li><li><b>Nur neue:</b> Wörter, die du noch nie gesehen hast</li><li><b>Zuletzt falsch:</b> deine letzten Fehler</li><li><b>Favoriten</b> und <b>schwierige Wörter</b></li></ul>
+        <p class="guide-note">Alles lässt sich nach Einheit und Abschnitt filtern. Das Statistikfenster zeigt Leitner-Boxen, Trefferquote und Ergebnisse pro Einheit.</p>
+      </article>
+      <article class="panel guide-card">
+        <span class="tag">EINSTELLUNGEN &amp; DATEN</span>
+        <h3>Alles auf deinem Rechner.</h3>
+        <ul class="modes"><li>Helles / dunkles Design und Muttersprache direkt in der App.</li><li>Wortliste, Fortschritt und Einstellungen liegen in <code>%APPDATA%\WortschatzKarten\</code>.</li><li>Neu anfangen: <b lang="de">Daten → Lernfortschritt zurücksetzen</b>.</li><li>Eigene Liste: <b lang="de">Daten → Excel aktualisieren…</b> (<kbd>Ctrl</kbd>+<kbd>O</kbd>).</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="excel" class="sec excel-sec" aria-labelledby="excel-heading">
+  <div class="wrap excel-grid">
+    <div class="excel-sheet panel" aria-hidden="true">
+      <div class="sheet-bar"><i></i><i></i><i></i><span>DSH_Wortschatz_Table.xlsx</span></div>
+      <table>
+        <tr><th>Unite</th><th>Deutsche Word</th><th>Erklärung</th><th>Turkish</th></tr>
+        <tr><td>1</td><td>der Dialekt</td><td>regionale Sprachform</td><td>lehçe</td></tr>
+        <tr><td>1</td><td>die Mundart</td><td>Dialekt</td><td>ağız</td></tr>
+        <tr><td>2</td><td>…</td><td>…</td><td>…</td></tr>
+      </table>
+      <span class="burst sheet-burst"><svg><use href="#starburst" fill="#3dbb6e"/></svg><span>1.436<br>WÖRTER</span></span>
+    </div>
+    <div>
+      <span class="tag green">EXCEL-WORTLISTE</span>
+      <h2 id="excel-heading" style="margin:18px 0 16px">Liste laden und nach Belieben anpassen.</h2>
+      <p>Die mitgelieferte DSH-Wortliste ist eine einzige Excel-Datei. Du kannst sie ausdrucken, eigene Notizen ergänzen oder als Vorlage für deine eigene Liste nutzen — egal ob A1 oder C1.</p>
+      <div class="hero-actions" style="margin:26px 0 22px">
+        <a class="btn" style="--bg:var(--green)" href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 8l8 8M16 8l-8 8" stroke-linecap="round"/></svg>Excel-Liste laden</a>
+        <a class="small-link" href="https://github.com/smyrna-pergamum/wortschatz-karten/blob/main/DSH_Wortschatz_Table.xlsx" target="_blank" rel="noopener">Auf GitHub ansehen ↗</a>
+      </div>
+      <details class="cols"><summary>Spalten für deine eigene Liste</summary>
+        <div class="cols-body">
+          <p>Die Kopfzeile muss in den ersten 15 Zeilen stehen. Deutsche, englische und türkische Spaltennamen werden erkannt. Nur die Spalte <b>Wort</b> ist Pflicht.</p>
+          <table class="col-table">
+            <tr><th>Spalte</th><th>Bedeutung</th><th>Pflicht</th></tr>
+            <tr><td><code>Unite</code> / <code>Lektion</code></td><td>Einheit</td><td>nein*</td></tr>
+            <tr><td><code>Abschnitt</code></td><td>Abschnitt / Thema</td><td>nein</td></tr>
+            <tr><td><code>Deutsche Word</code> / <code>Wort</code></td><td>Deutsches Wort</td><td><b>ja</b></td></tr>
+            <tr><td><code>Erklärung</code></td><td>Deutsche Erklärung</td><td>nein</td></tr>
+            <tr><td><code>Synonym</code> / <code>Antonym</code></td><td>Synonyme / Antonyme</td><td>nein</td></tr>
+            <tr><td><code>English</code></td><td>Englische Bedeutung</td><td>nein</td></tr>
+            <tr><td><code>Turkish</code> / <code>Muttersprache</code></td><td>Türkische Bedeutung</td><td>nein</td></tr>
+            <tr><td><code>Beispiel</code></td><td>Beispielsatz</td><td>nein</td></tr>
+          </table>
+          <p class="guide-note">* Ohne Einheiten-Spalte wird der Tabellenblattname verwendet. Beim erneuten Import wird dein Fortschritt über Einheit und Wort zugeordnet und bleibt erhalten.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="insights-heading">
+  <div class="wrap insights">
+    <div class="stats-panel">
+      <span class="tag">04 · FORTSCHRITT SEHEN</span>
+      <h2 id="insights-heading">Kleine Schritte, sichtbarer Fortschritt.</h2>
+      <p>Wie viele Wörter hast du gelernt, wo hattest du Mühe, welche Karten warten auf dich? Die Statistik gibt dir den Überblick.</p>
+      <button class="frame" id="stats-zoom" type="button" aria-label="Lernstatistik vergrößern"><img src="../assets/stats.png" alt="Lernstatistik: Kartenzahlen, Leitner-Boxen, Trefferquote und Ergebnisse pro Einheit" width="820" height="680" loading="lazy"><span class="zoom-hint" aria-hidden="true">GRÖSSER!</span></button>
+      <p class="stats-caption">Eine Beispielsitzung: Ergebnisse pro Einheit und Verteilung auf die Leitner-Boxen.</p>
+    </div>
+    <aside class="aside-features" aria-label="Weitere Funktionen">
+      <article class="aside-feature panel"><span class="tag">DEINE LISTE, DEIN ZIEL</span><h3>Bring dein Vokabelheft mit.</h3><p>Importiere deine eigene Excel-Datei — für jedes Niveau von A1 bis C1. Beim Aktualisieren bleibt dein Fortschritt erhalten. Favoriten und schwierige Wörter kannst du nach Excel exportieren.</p></article>
+      <article class="aside-feature panel"><span class="tag pink">BRÜCKE ZUR MUTTERSPRACHE</span><h3>Ein Wort. In vielen Sprachen.</h3><p>Sieh das deutsche Wort und den Beispielsatz in einer der unterstützten Sprachen.</p><div class="languages"><span>Türkisch</span><span>Englisch</span><span>Arabisch</span><span>Russisch</span><span>Persisch</span><span>Spanisch</span><span>Französisch</span><span>Italienisch</span><span>Polnisch</span><span>Ukrainisch</span></div></article>
+      <article class="aside-feature panel"><span class="tag sky">OHNE KONTO</span><h3>Dein Lernraum, auf deinem Rechner.</h3><p>Kein Konto nötig. Wortlisten, Fortschritt und Einstellungen bleiben auf deinem Rechner. Details zu optionaler Online-Übersetzung und Aussprache findest du unten.</p></article>
+    </aside>
+  </div>
+</section>
+
+<section id="sorular" class="sec faq-sec" aria-labelledby="faq-heading">
+  <div class="wrap faq">
+    <div>
+      <span class="tag">05 · HÄUFIGE FRAGEN</span>
+      <h2 id="faq-heading">Bevor du loslegst.</h2>
+      <p class="faq-intro">Eine eher technische Frage?<br><a href="https://github.com/smyrna-pergamum/wortschatz-karten#readme" target="_blank" rel="noopener">Zur Projektdokumentation ↗</a></p>
+    </div>
+    <div><details><summary>Für wen ist die App?</summary><p>Für alle, die Deutsch lernen — von A1 bis C1 — und für alle, die sich auf die DSH vorbereiten. Die mitgelieferte Liste enthält den DSH-Wortschatz; mit deiner eigenen Excel-Liste lernst du auf jedem Niveau. Die Oberfläche der App ist auf Deutsch.</p></details>
+      <details><summary>Ist sie wirklich kostenlos?</summary><p>Ja. Wortschatz Karten ist kostenlos und Open Source unter der MIT-Lizenz. Den Quellcode findest du auf GitHub. Ein Konto brauchst du nicht.</p></details>
+      <details><summary>Auf welchen Geräten läuft sie?</summary><p>Das Setup ist für Windows 10 und Windows 11 (64 Bit). Die Karte auf dieser Seite ist nur ein Beispiel; die vollständige App wird unter Windows installiert.</p></details>
+      <details><summary>Brauche ich Internet?</summary><p>Karteikarten und Lernfortschritt funktionieren offline. Nur die optionale Übersetzung und die Online-Aussprache brauchen Internet; Ergebnisse werden zwischengespeichert. Für die Übersetzung werden das deutsche Wort und der Beispielsatz an Google Translate gesendet (Sätze notfalls an MyMemory), für die Online-Aussprache das Wort an Googles Sprachdienst. Mit einer deutschen Windows-Stimme klappt die Aussprache auch offline.</p></details>
+      <details><summary>Kann ich eigene Wörter hinzufügen?</summary><p>Ja. Über <span lang="de">Daten → Excel aktualisieren…</span> importierst du deine Excel-Datei (.xlsx). Nur die Wortspalte ist Pflicht; Erklärung, Übersetzung, Synonyme, Antonyme und Beispielsätze sind optional. <a href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>Beispieldatei herunterladen.</a> Die Spalten findest du im <a href="#excel">Excel-Abschnitt</a>.</p></details>
+      <details><summary>Wie installiere ich die App?</summary><p>Der Download-Knopf führt zur neuesten Version auf GitHub. Lade dort <strong>WortschatzKarten_Setup.exe</strong> herunter und folge dem Setup (Administratorrechte nötig). Bestätige beim ersten Start den Import der Wortliste. Schritt für Schritt: <a href="#kilavuz">Anleitung</a>.</p></details></div>
+  </div>
+</section>
+
+<section id="indir" class="download-sec" aria-labelledby="download-heading">
+  <div class="wrap">
+    <div class="iris iris-reveal" id="iris">
+      <div class="iris-inner">
+        <span class="tag">BEREIT FÜR DEIN NÄCHSTES WORT?</span>
+        <h2 id="download-heading">Starte heute mit einer Karte!</h2>
+        <p>Mit der fertigen DSH-Liste oder deiner eigenen. Ein bisschen Lernen, ein neuer Anfang.</p>
+        <div class="download-links">
+          <a class="btn download-latest" href="https://github.com/smyrna-pergamum/wortschatz-karten/releases/latest"><span class="winlogo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Kostenlos laden ↓</a>
+          <a class="btn alt" href="https://github.com/smyrna-pergamum/wortschatz-karten" target="_blank" rel="noopener">Quellcode ↗</a>
+        </div>
+        <div class="download-foot">Windows 10 / 11 · 64 bit · GitHub Releases</div>
+      </div>
+    </div>
+    <div class="iris-extra">
+      <a class="btn" style="--bg:var(--green)" href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>Excel-Liste laden ↓</a>
+      <a class="btn sky" href="#kilavuz">Anleitung ↑</a>
+    </div>
+    <div class="privacy-line"><span>KOSTENLOS &amp; OPEN SOURCE</span><span>KEIN KONTO NÖTIG</span><span>FORTSCHRITT BLEIBT BEI DIR</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-main">
+      <a href="#" class="logo">Wortschatz Karten</a>
+      <div class="footer-links"><a href="#kilavuz">Anleitung</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/raw/main/DSH_Wortschatz_Table.xlsx" download>Excel-Liste ↓</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/issues" target="_blank" rel="noopener">Feedback ↗</a><a href="https://github.com/smyrna-pergamum/wortschatz-karten/blob/main/LICENSE" target="_blank" rel="noopener">MIT-Lizenz ↗</a><a href="#main">Nach oben ↑</a></div>
+    </div>
+    <div class="footer-bottom"><p>Es beginnt mit einem Wort. Jede Wiederholung ist ein Schritt weiter!</p><span>Ein unabhängiges Open-Source-Werkzeug zum Deutschlernen.</span></div>
+  </div>
+</footer>
+
+<dialog id="image-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-head"><span id="dialog-title">App · Helles Design</span><button type="button" id="close-dialog">Schließen ×</button></div>
+  <img id="dialog-image" class="dialog-img" src="../assets/app-light.png" alt="Wortschatz Karten im hellen Design: Karteikarte, Filter, Lernstatistik und Bedienknöpfe">
+</dialog>
+
+<script>window.T={"altLight": "Wortschatz Karten im hellen Design: Karteikarte, Filter, Lernstatistik und Bedienknöpfe", "altDark": "Wortschatz Karten im dunklen Design: deutsche Worterklärung, Übersetzungen und Beispielsatz", "altStats": "Lernstatistik: Kartenzahlen, Leitner-Boxen, Trefferquote und Ergebnisse pro Einheit", "capLight": "Karteikarten, Lernmodi und dein Fortschritt — auf einem Bildschirm.", "capDark": "Die Rückseite: Erklärung, Übersetzung, Synonyme und Antonyme.", "sideFront": "VORDERSEITE / DEUTSCH", "sideBack": "RÜCKSEITE / BEDEUTUNG & KONTEXT", "flip": "Karte umdrehen ↻", "flipBack": "Zurück zur Vorderseite ↻", "liveFront": "Vorderseite: der Dialekt.", "liveBack": "Rückseite: Mundart, regionale Sprache. In Bayern hört man viele Dialekte. Synonym: Mundart, Antonym: Standardsprache.", "box": "Box", "boxes": [["Erster Schritt", "Nach einer richtigen Antwort kommt die erste Wiederholung nach 1 Tag. Falsch beantwortete Karten kommen heute noch einmal."], ["Schon vertrauter", "In Box 2 beträgt der neue Abstand für eine richtig beantwortete Karte 2 Tage."], ["Die Verbindung wächst", "In Box 3 steigt der Abstand auf 4 Tage. Wörter, die du kennst, lernst du seltener."], ["Längerer Abstand", "Karten in Box 4 werden nach 8 Tagen wiederholt. Eine falsche Antwort heißt: zurück in Box 1."], ["Gelernte Wörter", "Karten in Box 5 gelten als gelernt und werden alle 16 Tage wiederholt."]], "dlgLight": "App · Helles Design", "dlgDark": "App · Dunkles Design", "dlgStats": "Lernstatistik"};</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
